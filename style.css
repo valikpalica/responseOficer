@@ -1,0 +1,61 @@
+body{
+    padding: 0;
+    margin:0;
+    background-color: #B3E5FC;
+}
+.divclass{
+    width: 80%;
+    padding: 10px 20px;
+    margin: 20px auto;
+
+    height: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: #FFFFFF;
+    margin-top:30px;
+    border-radius: 25px;
+}
+.header{
+    text-align: center;
+    margin: 2% auto;
+}
+.header1{
+    text-align: center;
+
+}
+.savebutton{
+    text-align: center;
+    margin: 5% auto;
+}
+button{
+    width: 15%;
+    height: 8%;
+}
+td{
+    text-align: justify;
+}
+@media only screen and (min-width: 1200px){
+    .divclass{
+        width: 800px;
+        padding: 10px 20px;
+        margin: 20px auto;
+
+        height: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        background-color: #FFFFFF;
+        margin-top:30px;
+        border-radius: 25px;
+    }
+}
+.p1{
+    margin: 25%;
+}
+.tdcheck{
+    max-width: 20px;
+    
+}
+.tbody p{
+    margin-left: 20px;
+}
+.credit{
+    text-align: center;
+}
