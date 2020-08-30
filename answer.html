@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+          <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"><h3>ВІДГУК НА ВИПУСКНИКА </h3></div>
+    <div class="divclass">
+        <h3 class="header1">Загальні відомості</h3>
+        <div class="input-field col s6">
+            <input id="zvanije" type="text" name = "response" value="солдат" readonly>
+            <label for="zvanije">Військове звання</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="FLP" type="text" name = "response"  value="Палиця Валентин Олександрович" readonly>
+            <label for="FLP">Прізвище, ім’я, по батькові</label>
+        </div>
+    
+        <div class="row" style="padding: 0 20px">
+            <div class="input-field col ">
+                <input id="institute" type="text" name = "response"  value="ВІТІ" readonly>
+                <label for="institute">Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
+            </div>
+            <div class="input-field col ">
+                <input id="year" type="text"  name = "response"  value="2022" readonly>
+                <label for="year">у (році)</label>
+            </div>
+        </div>
+        <div class="input-field col s6">
+            <input id="facultet" type="text" name = "response"  value="Інформаційних систем" readonly>
+            <label for="facultet">Факультет</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="specialize" type="text" name = "response"  value="Комп'ютерні науки" readonly>
+            <label for="specialize">За спеціальністю</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="work" type="text" name = "response"  value="А0334 Кібер центр ГШ ЗСУ" readonly>
+            <label for="work">Проходить службу (оперативне командування, військова частина)</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="posada" type="text" name = "response"  value="начальник відділу" readonly>
+            <label for="posada">На посаді </label>
+        </div>
+        <div class="input-field col s6">
+            <input id="vidpovidnist" type="text" name = "response"  value="Відповідає" readonly>
+            <label for="vidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
+                відповідає)</label>
+        </div>
+    </div>
+
+
+
+    
+<div class="divclass">
+    <h3 class="header1">Оцінка військово-професійних якостей офіцера-випускника за результатами службової діяльності</h3>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Перелік військово-професійних якостей
+                офіцера-випускника
+            </th>
+            <th scope="col">Оцінка в балах</th>
+            <th scope="col">Примітка</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row" rowspan="4">1</th>
+            <td><h6>Правові (знання та виконання)</h6></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
+            <td>а) основ кримінального кодексу щодо військових злочинів та відповідальності за них</td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>б) основ міжнародного гуманітарного права</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="?" readonly></td>
+        </tr>
+        <tr>
+
+            <td>в) Статутів Збройних Сил України</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="4">2</th>
+            <td><h6>Організаційно-управлінські (здатність і готовність)</h6></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
+            <td>а) підтримувати підрозділ у стані постійної бойової готовності</td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>б) планувати, організовувати та контролювати повсякденну діяльність підрозділу</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>в) управляти повсякденною діяльністю підрозділу через підпорядкований сержантський склад</td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="4">3</th>
+            <td><h6>Загальновійськові, тактичні (здатність)</h6></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
+            <td>а) здійснювати підготовку та управляти підрозділом під час виконання бойових (спеціальних) завдань,
+                проведення навчань, занять
+            </td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>б) приймати обґрунтовані рішення в складній обстановці під час виконання бойових (спеціальних) завдань,
+                проведення навчань, занять
+            </td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>в) вести (відпрацьовувати) бойові (звітні) документи</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="9">4</th>
+            <td><h6>Тактико-спеціальні (здатність)</h6></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
+            <td>а) організовувати і вести розвідку під час виконання бойових (спеціальних) завдань, проведення навчань,
+                занять
+            </td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>б) організовувати і підтримувати стійкий зв'язок під час під час виконання бойових (спеціальних)
+                завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>в) здійснювати заходи з інженерної підготовки підрозділу під час підготовки та в ході виконання бойових
+                (спеціальних) завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>г) здійснювати РХБ захист дій підрозділу під час під час виконання бойових (спеціальних) завдань,
+                проведення навчань, занять
+            </td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>д) здійснювати заходи з топогеодезичного забезпечення дій підрозділу під час під час виконання бойових
+                (спеціальних) завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>є) організовувати заходи ППО та маскування підрозділу</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>е) здійснювати заходи з медичного забезпечення дій підрозділу під час під час виконання бойових
+                (спеціальних) завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>ж) організовувати взаємодію з іншими підрозділами</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="3">5</th>
+            <td><h6>Військово-технічні (знання та уміння)</h6></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
+            <td>а) володіння штатним озброєнням та військовою технікою</td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>б) б) організовувати експлуатацію озброєння та військової техніки (обслуговування та ремонт) під час під
+                час виконання бойових (спеціальних) завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="4">6</th>
+            <td><h6>Виховні, методичні (здатність)</h6></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
+            <td>а) виховувати у підлеглих патріотизм та любов до Батьківщини</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>б) виховувати особовий склад та зміцнювати військову дисципліну у підпорядкованому підрозділі</td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>в) проводити навчальні заняття з особовим складом підпорядкованого підрозділу з дотриманням заходів
+                безпеки
+            </td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="5">7</th>
+            <td><h6>Лідерські якості</h6></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
+            <td>а) здатність до мотивації особового складу на успішне виконання завдання</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>б) вміння працювати в команді</td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>в) особиста дисциплінованість, стресостійкість та витривалість</td>
+            <td><input type="text" value="5" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        <tr>
+
+            <td>г) швидко реагувати на ризькі зміни в бойовій (навчальній) обстановці</td>
+            <td><input type="text" value="4" readonly></td>
+            <td><input type="text" value="" readonly></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+    
+
+
+<div class="divclass">
+    <h3 class="header1">Самооцінка військово-професійних якостей офіцером-випускником за результатами службової діяльності</h3>
+    <table class="table table-bordered" style="align-items: center">
+        <thead style="text-align: center">
+        <tr>
+            <th scope="col" >№</th>
+            <th scope="col" >Професійні важливі якості офіцера</th>
+            <th scope="col" colspan="5">Оцінка в балах</th>
+        </tr>
+        </thead>
+        <tbody class="tbody">
+        <tr>
+            <th scope="row" rowspan="4">1</th>
+            <td colspan="6"><h6>Правові (знання та виконання)</h6></td>
+        </tr>
+        <tr>
+            <td>а) основ кримінального кодексу щодо військових злочинів та відповідальності за них</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>б) основ міжнародного гуманітарного права</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>в) Статутів Збройних Сил України</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="4">2</th>
+            <td colspan="6"><h6>Організаційно-управлінські (здатність і готовність)</h6></td>
+        </tr>
+        <tr>
+            <td>а) підтримувати підрозділ у стані постійної бойової готовності</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>б) планувати, організовувати та контролювати повсякденну діяльність підрозділу</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>в) управляти повсякденною діяльністю підрозділу через підпорядкований сержантський склад</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="4">3</th>
+            <td colspan="6"><h6>Загальновійськові, тактичні (здатність)</h6></td>
+        </tr>
+        <tr>
+            <td>а) здійснювати підготовку та управляти підрозділом під час виконання бойових (спеціальних) завдань,
+                проведення навчань, занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>б) приймати обґрунтовані рішення в складній обстановці під час виконання бойових (спеціальних) завдань,
+                проведення навчань, занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>в) вести (відпрацьовувати) бойові (звітні) документи</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="9">4</th>
+            <td colspan="6"><h6>Тактико-спеціальні (здатність)</h6></td>
+        </tr>
+        <tr>
+            <td>а) організовувати і вести розвідку під час виконання бойових (спеціальних) завдань, проведення навчань,
+                занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>б) організовувати і підтримувати стійкий зв'язок під час під час виконання бойових (спеціальних)
+                завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>в) здійснювати заходи з інженерної підготовки підрозділу під час підготовки та в ході виконання бойових
+                (спеціальних) завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>г) здійснювати РХБ захист дій підрозділу під час під час виконання бойових (спеціальних) завдань,
+                проведення навчань, занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>д) здійснювати заходи з топогеодезичного забезпечення дій підрозділу під час під час виконання бойових
+                (спеціальних) завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>є) організовувати заходи ППО та маскування підрозділу</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>е) здійснювати заходи з медичного забезпечення дій підрозділу під час під час виконання бойових
+                (спеціальних) завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>ж) організовувати взаємодію з іншими підрозділами</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="3">5</th>
+            <td colspan="6"><h6>Військово-технічні (знання та уміння)</h6></td>
+        </tr>
+        <tr>
+            <td>а) володіння штатним озброєнням та військовою технікою</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>б) організовувати експлуатацію озброєння та військової техніки (обслуговування та ремонт) під час під
+                час виконання бойових (спеціальних) завдань, проведення навчань, занять
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="4">6</th>
+            <td colspan="6"><h6>Виховні, методичні (здатність)</h6></td>
+        </tr>
+        <tr>
+            <td>а) виховувати у підлеглих патріотизм та любов до Батьківщини</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>б) виховувати особовий склад та зміцнювати військову дисципліну у підпорядкованому підрозділі</td>
+            <td><input type="text" name="" readonly value="4"><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>в) проводити навчальні заняття з особовим складом підпорядкованого підрозділу з дотриманням заходів
+                безпеки
+            </td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+
+
+        <tr>
+            <th scope="row" rowspan="5">7</th>
+            <td colspan="6"><h6>Лідерські якості</h6></td>
+        </tr>
+        <tr>
+            <td>а) здатність до мотивації особового складу на успішне виконання завдання</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>б) вміння працювати в команді</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>в) особиста дисциплінованість, стресостійкість та витривалість</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        <tr>
+            <td>г) швидко реагувати на ризькі зміни в бойовій (навчальній) обстановці</td>
+            <td><input type="text" name="" readonly value="4"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<div class="divclass" >
+    <h3 class="header1">Перелік компонент освітньо-професійної програми (навчальні дисципліни), які формують
+        військово-професійні та військово-спеціальні компетентності випускника</h3><br>
+    <table class="table table-bordered" style="align-items: center">
+        <thead style="text-align: center">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Перелік навчальних дисциплін</th>
+            <th scope="col">Кількість кредитів</th>
+            <th scope="col" colspan="1">Корисності</th>
+            <th scope="col" colspan="1">Можливі недоліки</th>
+        </tr>
+        <tr>
+            <th colspan="12"><h6>Перелік навчальних дисциплін військово-професійного спрямування
+                програми базової підготовки
+            </h6></th>
+        </tr>
+        <tbody >
+            <tr>
+                <td>1</td>
+                <td>Морально-психологічне забезпечення
+                    підготовки та застосування Збройних
+                    Сил України
+                </td>
+                <td><div class="credit">2</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3агальна тактика
+                </td>
+                <td><div class="credit">5</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Основи військового управління (у тому
+                    числі штабні процедури НАТО)
+                </td>
+                <td><div class="credit">4</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Управління повсякденною діяльністю
+                    підрозділів (у тому числі охорона
+                    державної таємниці, безпека
+                    життєдіяльності, основи охорони праці,
+                    безпека військової діяльності)
+                </td>
+                <td><div class="credit">4</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Радіаційний, хімічний, біологічний
+                    захист підрозділів   (у тому числі
+                    екологія)
+
+                </td>
+                <td><div class="credit">3</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Військова топографія
+                </td>
+                <td><div class="credit">3</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Інженерна підготовка
+                </td>
+                <td><div class="credit">3</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Організація військового зв’язку,
+                </td>
+                <td><div class="credit">2</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Бойова система виживання воїнів (у
+                    тому числі тактична медицина)
+
+                </td>
+                <td><div class="credit">2</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Статути Збройних Сил України та їх
+                    практичне застосування (у тому числі
+                    стройова підготовка)
+                </td>
+                <td><div class="credit">3</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Стрілецька зброя та вогнева підготовка
+                </td>
+                <td><div class="credit">3</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Фізичне виховання та спеціальна фізична
+                    підготовка
+                </td>
+                <td><div class="credit">9</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Іноземна мова
+                    (загальний, загальновійськовий та спеціальний курс)
+                </td>
+                <td><div class="credit">20</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Правознавство (у тому числі основи військового законодавства та міжнародне гуманітарне право, морське право для спеціальностей підготовки військових фахівців морського профілю)
+                </td>
+                <td><div class="credit">2,5</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Військова педагогіка та психологія (у тому числі лідерство)
+                </td>
+                <td><div class="credit">2</div></td>
+                <td><input type="text" name="" readonly value=""></td>
+                <td><input type="text" name="" readonly value=""></td>
+            </tr>
+
+        </tbody>
+        </thead>
+    </table>
+</div>
+
+
+<div class="divclass">
+    <h3 class="header1">Рішення безпосереднього начальника, командира військової частини та ознайомлення випускника</h3>
+    <div class="input-field col s6">
+        <input id="comanderResponse" type="text" name="divResponse" readonly value="some text">
+        <label for="comander">Безпосередній
+            командир (посада, військове звання, прізвище, ініціали)
+        </label>
+    </div>
+    <div class="input-field col s6">
+        <input id="comandervhResponse" type="text" name="divResponse" readonly value="some text">
+        <label for="comandervhResponse">З відгуком згоден:
+            Командир військової частини (військове звання, прізвище, ініціали)
+        </label>
+    </div>
+    <div class="input-field col s6">
+        <input id="oficerResponse" type="text" name="divResponse" readonly value="some text">
+        <label for="oficerResponse">З відгуком ознайомлений (посада, військове звання, підпис випускника, прізвище,
+            ініціали)</label>
+    </div>
+
+</div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

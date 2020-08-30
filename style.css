@@ -59,3 +59,12 @@ td{
 .credit{
     text-align: center;
 }
+tbody input{
+    text-align: center;
+}
+
+.option{
+    text-align: justify;
+    text-indent: 10px;
+    padding: 5px;
+}
