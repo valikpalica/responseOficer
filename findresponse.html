@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="divclass">
+  <h5 class="header1">Пошук Офіцерів</h3>
+    <div class="inline">
+    <p class="range-field">
+      <input type="range" id="slider"/>
+      <label for="slider">Виберіть рік випуску</label>
+    </p>
+</div>
+<div>
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Інститут</a>  
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><input value="ВІТІ" readonly type="submit" class="dropdown" onclick="findinstitute(this)"></li>
+    <li><input type="submit" value="ВІКНУ" readonly class="dropdown"onclick="findinstitute(this)" ></li>
+  </ul>
+</div>
+
+    <div>
+        <table>
+            <thead>
+              <tr>
+                  <th>ПІБ</th>
+                  <th>інститут</th>
+                  <th>рік</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr>
+                <td><button value="Палиця Валентин" name="PID" onclick="find(this)" class="findButton">Палиця Валентин Олесандрович</button></td>
+                <td>ВІТІ</td>
+                <td>2022</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="find.js"></script>
+</body>
+</html>
