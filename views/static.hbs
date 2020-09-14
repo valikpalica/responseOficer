@@ -4,61 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-          <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header"><h3>ВІДГУК НА ВИПУСКНИКА </h3></div>
-    <div class="divclass">
-        <h3 class="header1">Загальні відомості</h3>
-        <div class="input-field col s6">
-            <input id="zvanije" type="text" name = "response" value="солдат" readonly>
-            <label for="zvanije">Військове звання</label>
-        </div>
-        <div class="input-field col s6">
-            <input id="FLP" type="text" name = "response"  value="Палиця Валентин Олександрович" readonly>
-            <label for="FLP">Прізвище, ім’я, по батькові</label>
-        </div>
-    
-        <div class="row" style="padding: 0 20px">
-            <div class="input-field col ">
-                <input id="institute" type="text" name = "response"  value="ВІТІ" readonly>
-                <label for="institute">Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
-            </div>
-            <div class="input-field col ">
-                <input id="year" type="text"  name = "response"  value="2022" readonly>
-                <label for="year">у (році)</label>
-            </div>
-        </div>
-        <div class="input-field col s6">
-            <input id="facultet" type="text" name = "response"  value="Інформаційних систем" readonly>
-            <label for="facultet">Факультет</label>
-        </div>
-        <div class="input-field col s6">
-            <input id="specialize" type="text" name = "response"  value="Комп'ютерні науки" readonly>
-            <label for="specialize">За спеціальністю</label>
-        </div>
-        <div class="input-field col s6">
-            <input id="work" type="text" name = "response"  value="А0334 Кібер центр ГШ ЗСУ" readonly>
-            <label for="work">Проходить службу (оперативне командування, військова частина)</label>
-        </div>
-        <div class="input-field col s6">
-            <input id="posada" type="text" name = "response"  value="начальник відділу" readonly>
-            <label for="posada">На посаді </label>
-        </div>
-        <div class="input-field col s6">
-            <input id="vidpovidnist" type="text" name = "response"  value="Відповідає" readonly>
-            <label for="vidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
-                відповідає)</label>
-        </div>
+<div class="headdd">
+    <header class="link">
+        <img src="img/emblam.png" alt="emblema" style="width: 20px;height: 20px">  {{surname}} {{data}}
+        <a href="/find">Пошук</a>
+
+
+    </header>
+</div>
+<div class="header"><h3>результатами оцінювання</h3></div>
+<div class="divclass">
+    <h3 class="header1">Загальні відомості</h3>
+    <div class="input-field col s6">
+        <input id="zvanije" type="text" name = "response" value="солдат" readonly>
+        <label for="zvanije">Військове звання</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="FLP" type="text" name = "response"  value="Палиця Валентин Олександрович" readonly>
+        <label for="FLP">Прізвище, ім’я, по батькові</label>
     </div>
 
+    <div class="row" style="padding: 0 20px">
+        <div class="input-field col ">
+            <input id="institute" type="text" name = "response"  value="ВІТІ" readonly>
+            <label for="institute">Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
+        </div>
+        <div class="input-field col ">
+            <input id="year" type="text"  name = "response"  value="2022" readonly>
+            <label for="year">у (році)</label>
+        </div>
+    </div>
+    <div class="input-field col s6">
+        <input id="facultet" type="text" name = "response"  value="Інформаційних систем" readonly>
+        <label for="facultet">Факультет</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="specialize" type="text" name = "response"  value="Комп'ютерні науки" readonly>
+        <label for="specialize">За спеціальністю</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="work" type="text" name = "response"  value="А0334 Кібер центр ГШ ЗСУ" readonly>
+        <label for="work">Проходить службу (оперативне командування, військова частина)</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="posada" type="text" name = "response"  value="начальник відділу" readonly>
+        <label for="posada">На посаді </label>
+    </div>
+    <div class="input-field col s6">
+        <input id="vidpovidnist" type="text" name = "response"  value="Відповідає" readonly>
+        <label for="vidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
+            відповідає)</label>
+    </div>
+</div>
 
 
-    
+
+
 <div class="divclass">
     <h3 class="header1">Оцінка військово-професійних якостей офіцера-випускника за результатами службової діяльності</h3>
     <table class="table table-bordered">
@@ -306,7 +314,7 @@
         </tbody>
     </table>
 </div>
-    
+
 
 
 <div class="divclass">
@@ -508,144 +516,144 @@
             </h6></th>
         </tr>
         <tbody >
-            <tr>
-                <td>1</td>
-                <td>Морально-психологічне забезпечення
-                    підготовки та застосування Збройних
-                    Сил України
-                </td>
-                <td><div class="credit">2</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
+        <tr>
+            <td>1</td>
+            <td>Морально-психологічне забезпечення
+                підготовки та застосування Збройних
+                Сил України
+            </td>
+            <td><div class="credit">2</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
 
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>3агальна тактика
-                </td>
-                <td><div class="credit">5</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3агальна тактика
+            </td>
+            <td><div class="credit">5</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
 
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Основи військового управління (у тому
-                    числі штабні процедури НАТО)
-                </td>
-                <td><div class="credit">4</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Управління повсякденною діяльністю
-                    підрозділів (у тому числі охорона
-                    державної таємниці, безпека
-                    життєдіяльності, основи охорони праці,
-                    безпека військової діяльності)
-                </td>
-                <td><div class="credit">4</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Радіаційний, хімічний, біологічний
-                    захист підрозділів   (у тому числі
-                    екологія)
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Основи військового управління (у тому
+                числі штабні процедури НАТО)
+            </td>
+            <td><div class="credit">4</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Управління повсякденною діяльністю
+                підрозділів (у тому числі охорона
+                державної таємниці, безпека
+                життєдіяльності, основи охорони праці,
+                безпека військової діяльності)
+            </td>
+            <td><div class="credit">4</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Радіаційний, хімічний, біологічний
+                захист підрозділів   (у тому числі
+                екологія)
 
-                </td>
-                <td><div class="credit">3</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Військова топографія
-                </td>
-                <td><div class="credit">3</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Інженерна підготовка
-                </td>
-                <td><div class="credit">3</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Організація військового зв’язку,
-                </td>
-                <td><div class="credit">2</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Бойова система виживання воїнів (у
-                    тому числі тактична медицина)
+            </td>
+            <td><div class="credit">3</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Військова топографія
+            </td>
+            <td><div class="credit">3</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Інженерна підготовка
+            </td>
+            <td><div class="credit">3</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Організація військового зв’язку,
+            </td>
+            <td><div class="credit">2</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Бойова система виживання воїнів (у
+                тому числі тактична медицина)
 
-                </td>
-                <td><div class="credit">2</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Статути Збройних Сил України та їх
-                    практичне застосування (у тому числі
-                    стройова підготовка)
-                </td>
-                <td><div class="credit">3</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>Стрілецька зброя та вогнева підготовка
-                </td>
-                <td><div class="credit">3</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>Фізичне виховання та спеціальна фізична
-                    підготовка
-                </td>
-                <td><div class="credit">9</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>Іноземна мова
-                    (загальний, загальновійськовий та спеціальний курс)
-                </td>
-                <td><div class="credit">20</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>Правознавство (у тому числі основи військового законодавства та міжнародне гуманітарне право, морське право для спеціальностей підготовки військових фахівців морського профілю)
-                </td>
-                <td><div class="credit">2,5</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>Військова педагогіка та психологія (у тому числі лідерство)
-                </td>
-                <td><div class="credit">2</div></td>
-                <td><input type="text" name="" readonly value=""></td>
-                <td><input type="text" name="" readonly value=""></td>
-            </tr>
+            </td>
+            <td><div class="credit">2</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Статути Збройних Сил України та їх
+                практичне застосування (у тому числі
+                стройова підготовка)
+            </td>
+            <td><div class="credit">3</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Стрілецька зброя та вогнева підготовка
+            </td>
+            <td><div class="credit">3</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Фізичне виховання та спеціальна фізична
+                підготовка
+            </td>
+            <td><div class="credit">9</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Іноземна мова
+                (загальний, загальновійськовий та спеціальний курс)
+            </td>
+            <td><div class="credit">20</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Правознавство (у тому числі основи військового законодавства та міжнародне гуманітарне право, морське право для спеціальностей підготовки військових фахівців морського профілю)
+            </td>
+            <td><div class="credit">2,5</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Військова педагогіка та психологія (у тому числі лідерство)
+            </td>
+            <td><div class="credit">2</div></td>
+            <td><input type="text" name="" readonly value=""></td>
+            <td><input type="text" name="" readonly value=""></td>
+        </tr>
 
         </tbody>
         </thead>
@@ -674,8 +682,8 @@
     </div>
 
 </div>
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

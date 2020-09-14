@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="headdd">
+    <header class="link">
+        <a href="/autorization">Вхід</a>
+        <a href="/registration">Рєестрація</a>
+        <a href="/find">Пошук</a>
+    </header>
+</div>
+<div class="divclass">
+    <h3 class="header1">Пошук Офіцерів</h3>
+    <div class="inline">
+        <p class="range-field">
+            <input type="range" id="slider"/>
+            <label for="slider">Виберіть рік випуску</label>
+        </p>
+    </div>
+    <div class="input-field col s6">
+        <div style="width: auto; height: auto">
+            <label>За спеціальністю</label>
+            <select class="browser-default" id="specialize">
+                <option value="" disabled selected>Вибір спеціальності</option>
+                <option value="121">121</option>
+                <option value="221">221</option>
+                <option value="226">226</option>
+            </select>
+        </div>
+    </div>
+    <button class="btn waves-effect waves-light" id="button">
+        Пошук
+    </button>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>ПІБ</th>
+                <th>Середня оцінка Офіцера</th>
+                <th>Середня оцінка Командира</th>
+            </tr>
+            </thead>
+
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="font/find.js"></script>
+</body>
+</html>

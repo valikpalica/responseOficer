@@ -1,0 +1,28 @@
+{
+  "name": "responseoficer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valikpalica/responseOficer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valikpalica/responseOficer/issues"
+  },
+  "homepage": "https://github.com/valikpalica/responseOficer#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.10.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5"
+  }
+}

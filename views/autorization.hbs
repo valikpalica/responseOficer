@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="headdd">
+    <header class="link">
+        <a href="/autorization">Вхід</a>
+        <a href="/registration">Рєестрація</a>
+    </header>
+</div>
+<div class="icon">
+    <img src="img/emblam.png" alt="emblam">
+</div>
+<div class="aut">
+    <form action="/autorization" method="post">
+        <h5>Вхід</h5>
+        <input placeholder="Ім'я" id="name" type="text"  name="name" class="validate">
+        <input placeholder="Прізвише" id="surname" type="text"  name="surname" class="validate">
+        <input placeholder="Військова частина" id="vch" type="text"  name="vch" class="validate">
+        <input id="password" type="password" class="validate" name="password" placeholder="Пароль">
+        <button class="btn waves-effect waves-light" type="submit" id="button">Увійти</button>
+    </form>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="font/aut.js"></script>
+</body>
+</html>
