@@ -1,7 +1,6 @@
 const Sequelize  = require('sequelize');
 const sequelize = require('../../coonectDB/dbConnect');
 const ResponseComander = require('./responseComander');
-const ResponseOficer = require('./responseOficer');
 const Disciplina = sequelize.define('Disciplina',{
     id:{
         type: Sequelize.INTEGER,

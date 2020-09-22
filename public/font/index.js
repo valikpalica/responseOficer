@@ -76,30 +76,35 @@ function lastPosition() {
 function getSecondTable() {
    let ballcom = document.getElementsByName('ballcom');
     let mas = [];
-
+    let counter = 0;
     for (let i = 0; i < ballcom.length; i++) {
         if(ballcom[i].checked){
            mas.push(ballcom[i].value);
+           counter+=+ballcom[i].value;
         }
     }
+    let midle = counter/mas.length;
 
-    return mas;
+    return {mas:mas,midle:midle};
 }
 
 function getThirdTable() {
     let radiobutton = document.getElementsByName("checkboxfirth");
     let mas = [];
+    let counter = 0;
     for (let i = 0; i < radiobutton.length; i++) {
         if (radiobutton[i].checked) {
             mas.push(radiobutton[i].value);
+            counter+=+radiobutton[i].value;
         }
     }
+    let midle = counter/mas.length;
     if (mas.length < 26) {
         alert("You not choose ball");
         mas.length = 0;
     } else if (mas.length == 26) {
         console.log(mas);
-        return mas;
+        return {mas:mas,midle:midle};
     } else {
         alert("You not correct choose ball");
         mas.length = 0;

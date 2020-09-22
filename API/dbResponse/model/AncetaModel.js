@@ -42,6 +42,14 @@ const Anceta = sequelize.define('Anceta',{
     year:{
         type:Sequelize.STRING,
         allowNull:false
+    },
+    midleOficer:{
+        type:Sequelize.INTEGER,
+        allowNull:true
+    },
+    midleComander:{
+        type:Sequelize.INTEGER,
+        allowNull:true
     }
 });
 

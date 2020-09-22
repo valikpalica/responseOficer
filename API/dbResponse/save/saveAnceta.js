@@ -6,21 +6,28 @@ const Disciplina = require('../model/disciplina');
 
 
 
-module.exports = async function (institute,ancetaObj) {
+module.exports = async function (institute,ancetaObj,midleOficer,midleComander) {
 
-    let res = await Anceta.create({
-        NSP:ancetaObj.FLP,
-        rank:ancetaObj.zvanije,
-        facultet:ancetaObj.facultet,
-        specialize:ancetaObj.specialize,
-        vch:ancetaObj.work,
-        posada:ancetaObj.posada,
-        viddpovidnist:ancetaObj.vidpovidnist,
-        instituteId:+institute,
-        year:ancetaObj.year,
-    });
+   try{
+       let res = await Anceta.create({
+           NSP:ancetaObj.FLP,
+           rank:ancetaObj.zvanije,
+           facultet:ancetaObj.facultet,
+           specialize:ancetaObj.specialize,
+           vch:ancetaObj.work,
+           posada:ancetaObj.posada,
+           viddpovidnist:ancetaObj.vidpovidnist,
+           instituteId:+institute,
+           year:ancetaObj.year,
+           midleOficer:midleOficer,
+           midleComander:midleComander,
+       });
 
-    return res.id;
+       return res.id;
+   }
+   catch (e) {
+       console.log(e);
+   }
 
 };
 

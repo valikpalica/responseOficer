@@ -1,6 +1,6 @@
 const Sequelize  = require('sequelize');
 const sequelize = require('../../coonectDB/dbConnect');
-const Disciplina = require('./disciplina');
+
 
 
 const ResponseComander = sequelize.define('ResponseComander',{
@@ -21,7 +21,8 @@ const ResponseComander = sequelize.define('ResponseComander',{
     ballcom:{
         type:Sequelize.STRING,
         allowNull:false
-    }
+    },
+
 });
 
 module.exports = ResponseComander;

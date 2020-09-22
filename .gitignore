@@ -2,3 +2,6 @@
 package-lock.json
 node_modules
 1111.txt
+testdb.js
+.gitignore
+html

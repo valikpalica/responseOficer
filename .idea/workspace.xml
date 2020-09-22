@@ -2,52 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e56a8263-42f6-4f19-a194-e8e75c124b0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/coonectDB/dbConnect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/AvalibilityAnceta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/model/AncetaModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/model/OPDModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/model/baseStackModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/model/disciplina.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/model/instituteModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/model/responseComander.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/model/responseOficer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/save/saveAnceta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/save/saveResponseComander.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/save/saveResponseOficeer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/savedsiciplina.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbUsers/Activedb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbUsers/find.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbUsers/findOficer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbUsers/model/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbUsers/saveUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/autorization.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/registrantion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/font/aut.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/font/find.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/font/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/font/registr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/emblam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/doc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route/mainRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/autorization.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/findperson.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/registration.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/responseComander.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/responseOficer.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/static.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbResponse/adminPanel/savesignature.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbResponse/insertAncetaMidlePoint/midleComander.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbResponse/insertAncetaMidlePoint/midleOficer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/findOficers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/saveInstitute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/saveOpds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbUsers/AvalibilityUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbUsers/getstatus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbUsers/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/answer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/find.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findresponse.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/findresponse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/response.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/response.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/methodDB/AvalibilityAnceta.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/AvalibilityAnceta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/model/AncetaModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/AncetaModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/model/disciplina.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/disciplina.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/model/responseComander.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/responseComander.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/save/saveAnceta.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/save/saveAnceta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/save/saveResponseComander.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/save/saveResponseComander.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/save/saveResponseOficeer.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/save/saveResponseOficeer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/savedsiciplina.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/savedsiciplina.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbUsers/find.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbUsers/find.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbUsers/findOficer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbUsers/model/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbUsers/model/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbUsers/saveUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbUsers/saveUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font/aut.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font/find.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/font/find.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/font/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font/registr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/doc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/route/mainRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/route/mainRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/autorization.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/autorization.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/findperson.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/findperson.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registration.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registration.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +117,13 @@
       <workItem from="1599629184487" duration="44736000" />
       <workItem from="1599892650927" duration="7661000" />
       <workItem from="1600062415619" duration="14869000" />
+      <workItem from="1600088780884" duration="282000" />
+      <workItem from="1600152353210" duration="3639000" />
+      <workItem from="1600323934791" duration="11733000" />
+      <workItem from="1600336293543" duration="1340000" />
+      <workItem from="1600406122812" duration="11512000" />
+      <workItem from="1600451613637" duration="392000" />
+      <workItem from="1600665706812" duration="31334000" />
     </task>
     <servers />
   </component>
@@ -136,33 +131,37 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1599895442863">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600416171538">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599895442863" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1599895442863">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1600416171538" />
+    <state width="1011" height="209" key="GridCell.Tab.0.bottom" timestamp="1600756848891">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599895442863" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1599895442862">
+    <state width="1011" height="209" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600756848891" />
+    <state width="1011" height="209" key="GridCell.Tab.0.center" timestamp="1600756848891">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599895442862" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1599895442863">
+    <state width="1011" height="209" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600756848891" />
+    <state width="1011" height="209" key="GridCell.Tab.0.left" timestamp="1600756848890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599895442863" />
+    <state width="1011" height="209" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600756848890" />
+    <state width="1011" height="209" key="GridCell.Tab.0.right" timestamp="1600756848891">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1011" height="209" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600756848891" />
     <state x="413" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598264451131">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="413" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1598264451131" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1598329911379">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1600422929056">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1598329911379" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599743941317">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600422929056" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600162979029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599743941317" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600162979029" />
   </component>
 </project>

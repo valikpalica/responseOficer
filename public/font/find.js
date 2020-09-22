@@ -1,33 +1,43 @@
-
-document.addEventListener('DOMContentLoaded', function() {
-    let  elems = document.querySelectorAll('.dropdown-trigger');
+document.addEventListener('DOMContentLoaded', function () {
+    let elems = document.querySelectorAll('.dropdown-trigger');
     let instances = M.Dropdown.init(elems);
 });
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.browser-default');
-    var instances = M.FormSelect.init(elems, options);
+    var instances = M.FormSelect.init(elems);
 });
 let button = document.getElementById('button');
-button.addEventListener('click',findinstitute);
+button.addEventListener('click', findinstitute);
 
-function createSlider(){
+function createSlider() {
     const date = new Date;
     document.getElementById('slider').max = date.getFullYear();
     document.getElementById('slider').min = 2000;
 }
-function findinstitute(){
-    let tbody = document.getElementById('tbody');
-    let year = document.getElementById("slider").value;
+
+async function findinstitute() {
+    let year = document.getElementById('slider').value;
     let specialize = document.getElementById('specialize').value;
-    let inHTML = '';
-    for (let i =0;i<cadet.length;i++){
-        inHTML+=`<tr></tr><td>${cadet[i].NSP}</td>` +
-            `<td>${cadet[i].year}</td>` +
-            `<td>${cadet[i].ins}</td></tr>`
-    }
-    tbody.innerHTML = inHTML
+    let rez = await fetch('/find', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify({year: year, specialize: specialize}),
+    });
+    let obj = await rez.json();
+    console.log(obj);
+    create_table(obj.answer);
+
 }
 
-const cadet = [{NSP:'Палиця Валентин Олександрович',ins:'5',year:'4'},{NSP:'Пархоменко Іван Олександрович',ins:'4',year:'4'},{NSP:'Жильцов  Олександр Валентинович',ins:'3',year:'2'},{NSP:'Пахнюк Захар Андрійович',ins:'3',year:'3'},{NSP:'Смирнов Павел Олександрович',ins:'3',year:'4'}];
+function create_table(mas) {
+    let tbody = document.getElementById('tbody');
+    let innerHTML = '';
+    for (let i = 0;i<mas.length;i++){
+        innerHTML+= `<tr><td>${mas[i].NSP}</td><td>${mas[i].midleOficer}</td><td>${mas[i].midleComander}</td></tr>`;
+    }
+    tbody.innerHTML= innerHTML;
+}
 
 createSlider();
