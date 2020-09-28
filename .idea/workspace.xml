@@ -2,40 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e56a8263-42f6-4f19-a194-e8e75c124b0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/adminPanel/savesignature.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/insertAncetaMidlePoint/midleComander.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/insertAncetaMidlePoint/midleOficer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/findOficers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/saveInstitute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/saveOpds.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbUsers/AvalibilityUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbUsers/getstatus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbUsers/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/selectAlldisciplinas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/selectallOPDS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/midlepoints/midleballs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/midlepoints/midleopds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/font/findopds.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/findopds.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/methodDB/AvalibilityAnceta.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/AvalibilityAnceta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/model/AncetaModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/AncetaModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/model/disciplina.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/disciplina.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/dbResponse/model/responseComander.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/responseComander.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/save/saveAnceta.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/save/saveAnceta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/save/saveResponseComander.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/save/saveResponseComander.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/save/saveResponseOficeer.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/save/saveResponseOficeer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/savedsiciplina.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/saveDisciplinas/savedsiciplina.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbUsers/find.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbUsers/find.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbUsers/findOficer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbUsers/model/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbUsers/model/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbUsers/saveUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbUsers/saveUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/model/responseOficer.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/responseOficer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font/aut.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/font/find.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/font/find.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/font/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/font/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font/registr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/route/doc.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/route/mainRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/route/mainRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/autorization.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/autorization.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/findperson.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/findperson.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/registration.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registration.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/responseComander.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/responseComander.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/responseOficer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/responseOficer.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/static.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/static.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +106,13 @@
       <workItem from="1600336293543" duration="1340000" />
       <workItem from="1600406122812" duration="11512000" />
       <workItem from="1600451613637" duration="392000" />
-      <workItem from="1600665706812" duration="31334000" />
+      <workItem from="1600665706812" duration="31407000" />
+      <workItem from="1600886107991" duration="1368000" />
+      <workItem from="1600937226938" duration="7739000" />
+      <workItem from="1601015034678" duration="14867000" />
+      <workItem from="1601103028280" duration="6554000" />
+      <workItem from="1601199393315" duration="6349000" />
+      <workItem from="1601269351280" duration="8594000" />
     </task>
     <servers />
   </component>
@@ -155,13 +144,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="413" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1598264451131" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1600422929056">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1601277328662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600422929056" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600162979029">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601277328662" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601206778386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600162979029" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601206778386" />
   </component>
 </project>

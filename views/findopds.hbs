@@ -1,3 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,9 +53,21 @@
         <table  class="table table-bordered" style="align-items: center">
             <thead>
             <tr>
-                <th>ПІБ</th>
-                <th>Середня оцінка Офіцера</th>
-                <th>Середня оцінка Командира</th>
+                <th rowspan="2">Дисципліна</th>
+                <th colspan="3">Корисності</th>
+                <th colspan="7">Можливі недоліки</th>
+            </tr>
+            <tr>
+                <th>А1</th>
+                <th>А2</th>
+                <th>А3</th>
+                <th>Б1</th>
+                <th>Б2</th>
+                <th>Б3</th>
+                <th>Б4</th>
+                <th>Б5</th>
+                <th>Б6</th>
+                <th>Відсоток не вибраних недоліків</th>
             </tr>
             </thead>
             <tbody id="tbody">
@@ -55,7 +77,8 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-<script src="font/find.js"></script>
+<script src="font/findopds.js"></script>
+</body>
+</html>
 </body>
 </html>

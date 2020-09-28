@@ -15,7 +15,7 @@ const ResponseOficer = sequelize.define('ResponseOficer',{
         allowNull: false
     },
     ballofc:{
-        type:Sequelize.STRING,
+        type:Sequelize.FLOAT,
         allowNull:false
     }
 

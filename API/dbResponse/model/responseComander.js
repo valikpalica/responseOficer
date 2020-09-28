@@ -19,7 +19,7 @@ const ResponseComander = sequelize.define('ResponseComander',{
         allowNull: false
     },
     ballcom:{
-        type:Sequelize.STRING,
+        type:Sequelize.FLOAT,
         allowNull:false
     },
 
