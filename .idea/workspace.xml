@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e56a8263-42f6-4f19-a194-e8e75c124b0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/selectAlldisciplinas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/dbResponse/methodDB/selectallOPDS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/midlepoints/midleballs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/midlepoints/midleopds.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/font/findopds.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/findopds.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/font/registration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/model/responseComander.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/responseComander.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/dbResponse/model/responseOficer.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/model/responseOficer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font/find.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/font/find.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/font/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/route/mainRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/route/mainRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/findopds.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/findopds.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/findperson.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/findperson.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/responseComander.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/responseComander.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/responseOficer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/responseOficer.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/static.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/static.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registration.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registration.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +102,10 @@
       <workItem from="1601015034678" duration="14867000" />
       <workItem from="1601103028280" duration="6554000" />
       <workItem from="1601199393315" duration="6349000" />
-      <workItem from="1601269351280" duration="8594000" />
+      <workItem from="1601269351280" duration="9334000" />
+      <workItem from="1601288993612" duration="943000" />
+      <workItem from="1601307519359" duration="518000" />
+      <workItem from="1601357771756" duration="5016000" />
     </task>
     <servers />
   </component>
@@ -120,10 +113,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600416171538">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601358906061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1600416171538" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601358906061" />
     <state width="1011" height="209" key="GridCell.Tab.0.bottom" timestamp="1600756848891">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

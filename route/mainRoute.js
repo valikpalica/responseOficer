@@ -35,7 +35,6 @@ router.get('/registration', async (req, res) => {
 router.post('/registration', async (req, res) => {
     let {name, posada, vch, password, password1, comander} = req.body;
     let user = await find(name, vch, password);
-    console.log(user);
     if (user) {
         console.log('user was created');
         res.redirect('/autorization');

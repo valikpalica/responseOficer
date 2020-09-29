@@ -24,6 +24,9 @@
         {{message}}
     </div>
 {{/if}}
+
+
+</div>
 <div class="aut">
     <form action="/registration" method="post">
         <h5>Реестрація</h5>
@@ -32,7 +35,9 @@
         <input placeholder="Посада" type="text" name="posada" >
         <input placeholder="Військова частина" type="text" name="vch" >
         <input id="password" type="password"   name="password" placeholder="Пароль">
+        <label id = 'lenghtPassword' style="color: red"></label>
         <input id="password1" type="password"   name="password1" placeholder="Повторний пароль">
+        <label id = 'errorMessage' style="color: red"></label>
         <p>
             <label>
                 <input name="comander"  value="0" type="checkbox" aria-label="Checkbox for following text input">
@@ -44,5 +49,6 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="font/registration.js"></script>
 </body>
 </html>

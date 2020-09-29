@@ -20,13 +20,15 @@ app.use(flash());
 app.use(session({
     secret: 'secret',
     resave: false,
-    saveUninitialized: false
-}))
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 3600
+    }
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static(path.join(__dirname,'public')));
-
 
 app.use('/',autification);
 
