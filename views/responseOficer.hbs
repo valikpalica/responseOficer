@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 <div class="headdd">
     <header class="link">
-        <img src="img/emblam.png" alt="emblema" style="width: 20px;height: 20px">  {{data}}
-        <a href="/find">Пошук</a>
-
-
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/find" style="font-size: 15px">Пошук Дисциплін</a>
+            <a class="navbar-brand" href="/findopds" style="font-size: 15px">Пошук Корисності</a>
+            <img src="img/emblam.png" alt="emblema" style="width: 30px;height: 30px;margin-left:auto">
+            {{data}}
+        </nav>
     </header>
 </div>
-<div class="header"><h3>ВІДГУК НА ВИПУСКНИКА </h3></div>
+<div class="header" style="margin-top: 60px"><h3 >ВІДГУК НА ВИПУСКНИКА</h3></div>
 <div class="divclass">
     <h3 class="header1">Загальні відомості</h3>
     <div class="input-field col s6">
@@ -69,9 +69,12 @@
             <label>За спеціальністю</label>
             <select class="browser-default" id="specialize">
                 <option value="" disabled selected>Вибір спеціальності</option>
-                <option value="121">121</option>
-                <option value="221">221</option>
-                <option value="226">226</option>
+                <option value="122">122 Комп’ютерні науки</option>
+                <option value="125">125 Кібербезпека</option>
+                <option value="126">126 Інформаційні системи та технології</option>
+                <option value="172">172 Телекомунікації та радіотехніка</option>
+                <option value="253">253 Військове управління</option>
+                <option value="255">255 Озброєння та військова техніка</option>
             </select>
         </div>
     </div>

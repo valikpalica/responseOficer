@@ -10,6 +10,11 @@ const selectAllDisciplina = require('../API/dbResponse/methodDB/selectAlldiscipl
 const midleball = require('../API/midlepoints/midleballs');
 const selectAllOpds = require('../API/dbResponse/methodDB/selectallOPDS');
 const midleopds = require('../API/midlepoints/midleopds');
+const createDoc = require('../API/save/downloaddoc');
+const createDisc = require('../API/save/downloadDisciplinas');
+const path = require('path');
+const fs = require('fs');
+
 
 router.get('/autorization', (req, res) => {
     res.status(200).render('autorization.hbs')
@@ -21,7 +26,7 @@ router.post('/autorization', passport.authenticate('local', {
     async (req, res) => {
         let {username, vch, password} = req.body;
         let user = await find(username, vch, password);
-        if (user.status == 1) {
+        if (user.status === 1) {
             res.redirect('/saveResponseComander');
         } else {
             res.redirect('/saveResponseOficer');
@@ -39,7 +44,7 @@ router.post('/registration', async (req, res) => {
         console.log('user was created');
         res.redirect('/autorization');
     } else {
-        if (password == password1) {
+        if (password === password1) {
             let rez;
             if (comander != undefined) {
                 rez = await saveUsers(name, posada, vch, password, 1);
@@ -56,7 +61,6 @@ router.post('/registration', async (req, res) => {
         }
     }
 });
-
 
 router.get('/saveResponseComander', checkAuthenticated, (req, res) => {
     let Data = new Date();
@@ -113,6 +117,45 @@ router.post('/findopds', async (req, res) => {
     let rez = await selectAllOpds(year, specialize);
     let masprocents = await midleopds(rez);
     res.json({answer: masprocents});
+});
+router.post('/downloadopds',async (req,res)=>{
+    let {year,specialize} = req.body;
+    let rez = await selectAllOpds(year, specialize);
+    let masprocents = await midleopds(rez);
+    let filePath = await createDoc(year,specialize,masprocents);
+    let status = fs.existsSync(filePath);
+    console.log(status);
+    if(status){
+        res.status(201).json({answer:status});
+    }
+    else {
+        res.status(400).json({answer:status});
+    }
+});
+
+router.get('/downloadopds',(req,res)=>{
+    res.sendFile(path.join(__dirname,'../public/word/wordopds.docx'));
+});
+
+
+router.post('/downloaddisciplinas',async (req,res)=>{
+    let {year,specialize} = req.body;
+    let mas = await selectAllDisciplina(year, specialize);
+    let midles = await midleball(mas);
+    console.log(midles);
+    let filePath = await createDisc(year,specialize,midles);
+    let status = fs.existsSync(filePath);
+    console.log(status);
+    if(status){
+        res.status(201).json({answer:status});
+    }
+    else {
+        res.status(400).json({answer:status});
+    }
+});
+
+router.get('/downloaddisciplinas',(req,res)=>{
+    res.sendFile(path.join(__dirname,'../public/word/worddisciplinas.docx'));
 });
 
 function checkAuthenticated(req, res, next) {

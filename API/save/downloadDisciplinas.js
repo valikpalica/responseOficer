@@ -1,15 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let elems = document.querySelectorAll('.dropdown-trigger');
-    let instances = M.Dropdown.init(elems);
-});
-document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.browser-default');
-    var instances = M.FormSelect.init(elems);
-});
-let button = document.getElementById('button');
-button.addEventListener('click', findinstitute);
-document.getElementById('save').addEventListener('click',generateLink);
-
+const fs = require('fs');
+const path = require('path');
+const {Document,Packer, Paragraph, TextRun, HeadingLevel,AlignmentType,Table,TableCell,TableRow} = require("docx");
 let namedisciplinas = [{name:'основ кримінального кодексу щодо військових злочинів та відповідальності за них'},
     {name:'основ міжнародного гуманітарного права'},
     {name:'Статутів Збройних Сил України'},
@@ -36,69 +27,56 @@ let namedisciplinas = [{name:'основ кримінального кодекс
     {name:'вміння працювати в команді'},
     {name:'особиста дисциплінованість, стресостійкість та витривалість'},
     {name:'швидко реагувати на ризькі зміни в бойовій (навчальній) обстановці'}];
+let nameDoc ='worddisciplinas.docx';
 
-function createSlider() {
-    const date = new Date;
-    document.getElementById('slider').max = date.getFullYear();
-    document.getElementById('slider').min = 2000;
-}
-async function generateLink() {
-    let year = document.getElementById('slider').value;
-    let specialize = document.getElementById('specialize').value;
-    if(year!==undefined&& specialize!==undefined){
+module.exports = async  function createDocDisciplina(year,specailize,mas){
 
-        let answer = await fetch('/downloaddisciplinas',{
-            method:'POST',
-            headers:{
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body:JSON.stringify({year:year,specialize:specialize}),
-        });
-        let json = await answer.json();
-        console.log(json.answer);
-        if(json.answer){
-            setTimeout(()=>{
-                let a = document.createElement('a');
-                a.setAttribute('href',`/downloaddisciplinas`);
-                a.setAttribute('download','worddisciplinas.docx');
-                a.innerText = 'Download';
-                let divLink = document.getElementById('divLInk');
-                divLink.appendChild(a);
-            },2000);
-        }}
-
-    else {
-        alert('choose year and specialize');
-    }
-}
-
-async function findinstitute() {
-    let year = document.getElementById('slider').value;
-    let specialize = document.getElementById('specialize').value;
-    let rez = await fetch('/find', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify({year: year, specialize: specialize}),
+    const doc  = new Document();
+    let paragraph1= new Paragraph({
+        text:`Рік випуску - ${year}  За спеціальністю - ${specailize}`,
+        heading: HeadingLevel.HEADING_1,
+        alignment: AlignmentType.CENTER
     });
-    let obj = await rez.json();
-    console.log(obj);
-    create_table(obj.answer);
-
-}
-
-function create_table(mas) {
-    let tbody = document.getElementById('tbody');
-    let innerHTML = '';
-    let link = '';
-    let name ='';
-    for (let i = 0;i<mas.length;i++){
-        let midleBallOficers  =  mas[i].midleBallOficers == null ? 0: mas[i].midleBallOficers;
-        let midleBallComanders = mas[i].midleComanders ==null? 0:mas[i].midleComanders;
-        let color = mas[i].midleBallOficers<3.0 || mas[i].midleComanders<3.0 ? '#D32F2F' :'#8BC34A';
-        innerHTML+= `<tr style="background-color: ${color}"><td>${namedisciplinas[mas[i].id-1].name}</td><td>${midleBallOficers}</td><td>${midleBallComanders}</td></tr>`;
+    let paragraph2= new Paragraph({
+        text:`Звіт про Середні значення оцінок про випускників по дисциплінам`,
+        heading: HeadingLevel.HEADING_1,
+        alignment: AlignmentType.CENTER
+    });
+    const table = new Table({
+        rows: [
+            new TableRow({
+                tableHeader:true,
+                children: [
+                    new TableCell({
+                        children: [new Paragraph('Назва дисципліни')]
+                    }),
+                    new TableCell({
+                        children: [new Paragraph('Середня оцінка Офіцерів')],
+                    }),
+                    new TableCell({
+                        children: [new Paragraph('Середня оцінка Командирів')],
+                    }),
+                ],
+            }),
+        ],
+    });
+    for (let i=0;i<mas.length;i++){
+        console.log(mas[i].midleBallOficers,mas[i].midleComanders);
+        table.addChildElement(new TableRow({children:[
+                new TableCell({
+                    children: [new Paragraph(namedisciplinas[i].name)]
+                }),
+                new TableCell({
+                    children: [new Paragraph(mas[i].midleBallOficers.toString())],
+                }),
+                new TableCell({
+                    children: [new Paragraph(mas[i].midleComanders.toString())],
+                }),
+            ]}))
     }
-    tbody.innerHTML= innerHTML;
-}
-createSlider();
+    await doc.addSection({children:[paragraph1,paragraph2,table]});
+    let  buffer = await Packer.toBuffer(doc);
+    fs.writeFileSync(path.join(__dirname, '../../public/word/',nameDoc),buffer);
+
+    return  path.join(__dirname,'../../public/word/',nameDoc)
+};

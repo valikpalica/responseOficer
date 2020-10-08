@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e56a8263-42f6-4f19-a194-e8e75c124b0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/font/registration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/save/downloadDisciplinas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/save/downloaddoc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/save/saveResponseComander.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/save/saveResponseComander.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbResponse/save/saveResponseOficeer.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbResponse/save/saveResponseOficeer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/dbUsers/Activedb.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/dbUsers/Activedb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font/find.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/font/find.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/font/findopds.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/font/findopds.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/route/mainRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/route/mainRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/autorization.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/autorization.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/findopds.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/findopds.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/findperson.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/findperson.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/registration.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/registration.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/responseComander.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/responseComander.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/responseOficer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/responseOficer.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +116,8 @@
       <workItem from="1601269351280" duration="9334000" />
       <workItem from="1601288993612" duration="943000" />
       <workItem from="1601307519359" duration="518000" />
-      <workItem from="1601357771756" duration="5016000" />
+      <workItem from="1601357771756" duration="7456000" />
+      <workItem from="1601445766828" duration="52508000" />
     </task>
     <servers />
   </component>

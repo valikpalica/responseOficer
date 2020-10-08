@@ -17,6 +17,7 @@ body{
 .header{
     text-align: center;
     margin: 2% auto;
+    padding-bottom: 50px;
 }
 .aut{
     text-align: center;
@@ -92,7 +93,7 @@ header{
 .icon{
    width: 100px;
    height: 100px;
-   margin: 0% auto;
+   margin: 50px auto;
 
 }
 .icon img{

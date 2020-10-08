@@ -1,5 +1,5 @@
 const sequelize = require('../coonectDB/dbConnect');
-const Institute = require('../dbResponse/model/instituteModel');
+
 
 
 module.exports = async function () {

@@ -18,7 +18,7 @@ module.exports = async function (institute, ancetaObj, responseComandermas, last
        let disID = 0;
        for (let i = 0; i < responseComandermas.length; i++) {
            disID++;
-           let res1 = await ResponseComander.create({
+           await ResponseComander.create({
                NSPComander: lastObj.comanderResponse,
                solution: lastObj.comandervhResponse,
                ballcom: responseComandermas[i],

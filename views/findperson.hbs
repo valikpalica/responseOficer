@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="headdd">
-    <header class="link">
-        <a href="/find">Пошук оцінок</a>
-        <a href="/findopds">Пошук корисності</a>
-    </header>
+<div class="header">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/find" style="font-size: 15px">Пошук Дисциплін</a>
+        <a class="navbar-brand" href="/findopds" style="font-size: 15px">Пошук Корисності</a>
+        <img src="img/emblam.png" alt="emblema" style="width: 30px;height: 30px; margin-left:auto">
+    </nav>
+
+
 </div>
-<div class="divclass">
+<div class="divclass" >
     <h3 class="header1">Пошук оцінок</h3>
     <div class="inline">
         <p class="range-field">
@@ -28,22 +31,30 @@
             <label>За спеціальністю</label>
             <select class="browser-default" id="specialize">
                 <option value="" disabled selected>Вибір спеціальності</option>
-                <option value="121">121</option>
-                <option value="221">221</option>
-                <option value="226">226</option>
+                <option value="122">122 Комп’ютерні науки</option>
+                <option value="125">125 Кібербезпека</option>
+                <option value="126">126 Інформаційні системи та технології</option>
+                <option value="172">172 Телекомунікації та радіотехніка</option>
+                <option value="253">253 Військове управління</option>
+                <option value="255">255 Озброєння та військова техніка</option>
             </select>
         </div>
     </div>
     <div style="margin-bottom: 10px">
-        <button class="btn waves-effect waves-light" id="button">
+        <button class="btn waves-effect waves-light" id="button" style="size: 30px">
             Пошук
         </button>
+        <button class="btn waves-effect waves-light" id="save" style="size: 30px">
+            Зберегти
+        </button>
+        <p id="divLInk"></p>
+
     </div>
     <div>
         <table  class="table table-bordered" style="align-items: center">
             <thead>
             <tr>
-                <th>ПІБ</th>
+                <th>Назва дисципліни</th>
                 <th>Середня оцінка Офіцерів</th>
                 <th>Середня оцінка Командирів</th>
             </tr>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,8 +12,10 @@
 
 <div>
     <header class="link">
-        <a href="/autorization">Вхід</a>
-        <a href="/registration">Реестрація</a>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/autorization" style="font-size: 15px">Вхід</a>
+            <a class="navbar-brand" href="/registration" style="font-size: 15px">Реестрація</a>
+        </nav>
     </header>
 </div>
 <div class="icon">
@@ -27,7 +30,7 @@
 
 
 </div>
-<div class="aut">
+<div class="aut" style="margin-top: -10px">
     <form action="/registration" method="post">
         <h5>Реестрація</h5>
         <input placeholder="Ім'я та Прізвище"  type="text"  name="name">
