@@ -38,7 +38,7 @@ router.get('/registration', async (req, res) => {
     res.render('registration.hbs');
 });
 router.post('/registration', async (req, res) => {
-    let {name, posada, vch, password, password1, comander} = req.body;
+    let {name, posada, vch, password, password1, status} = req.body;
     let user = await find(name, vch, password);
     if (user) {
         console.log('user was created');
@@ -46,7 +46,7 @@ router.post('/registration', async (req, res) => {
     } else {
         if (password === password1) {
             let rez;
-            if (comander != undefined) {
+            if (+status === 1) {
                 rez = await saveUsers(name, posada, vch, password, 1);
             } else {
                 rez = await saveUsers(name, posada, vch, password, 0);

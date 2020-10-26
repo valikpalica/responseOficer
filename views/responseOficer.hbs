@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Сторінка заяви від офіцера</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,7 +20,7 @@
     </header>
 </div>
 <div class="header" style="margin-top: 60px"><h3 >ВІДГУК НА ВИПУСКНИКА</h3></div>
-<div class="divclass">
+<div class="divclass" id="generalReposne">
     <h3 class="header1">Загальні відомості</h3>
     <div class="input-field col s6">
         <div style="width: auto; height: auto">
@@ -91,11 +91,12 @@
         <label for="vidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
             відповідає)</label>
     </div>
-
-
+    <div class="savebutton">
+        <button type="button" class="btn btn-light" id="next1" disabled>Далі</button>
+    </div>
 </div>
 
-<div class="divclass">
+<div class="divclass" id="table1" style="display: none">
     <h3 class="header1">Самооцінка військово-професійних якостей офіцером-випускником за результатами службової діяльності</h3>
     <table class="table table-bordered" style="align-items: center">
         <thead style="text-align: center">
@@ -1035,11 +1036,14 @@
         </tr>
         </tbody>
     </table>
-
+    <div class="savebutton">
+        <button type="button" class="btn btn-light" id="back1">Назад</button>
+        <button type="button" class="btn btn-light" id="next2" disabled>Далі</button>
+    </div>
 </div>
 
 
-<div class="divclass" >
+<div class="divclass" id="instuction" style="display: none">
     <h3 class="header1">Система оцінювання</h3><br>
     <div style="border: 1px solid black;">
         <div class="option">
@@ -1063,9 +1067,15 @@
         <div class="option">низький рівень викладання цієї навчальної дисципліни;</div>
         <h6 style="text-indent: 10px;">Б6</h6>
         <div class="option">навчальна дисципліна, викладання якої мало би сприяти формуванню зазначеної компетентності, взагалі не включена в освітню програму.</div>
-
+        <div class="savebutton">
+            <button type="button" class="btn btn-light" id="back2">Назад</button>
+            <button type="button" class="btn btn-light" id="next3">Далі</button>
+        </div>
     </div>
     <br>
+</div>
+
+<div class="divclass" id="table2" style="display: none">
     <h3 class="header1">Перелік компонент освітньо-професійної програми (навчальні дисципліни), які формують
         військово-професійні та військово-спеціальні компетентності випускника</h3><br>
     <table class="table table-bordered" style="align-items: center">
@@ -2031,22 +2041,128 @@
         </tbody>
         </thead>
     </table>
+    <div class="savebutton">
+        <button type="button" class="btn btn-light" id="back3">Назад</button>
+        <button type="button" class="btn btn-light" id="next4" disabled>Далі</button>
+    </div>
 </div>
 
 
-<div class="divclass">
+<div class="divclass" id="responseOficer" style="display: none">
     <h3 class="header1">Рішення Офіцера</h3>
     <div class="input-field col s6">
         <input id="oficerResponse" type="text" name="divResponse">
         <label for="oficerResponse">Рішення офіцера (посада, військове звання, прізвище,
             ініціали)</label>
     </div>
+    <div class="savebutton">
+        <button type="button" class="btn btn-light" id="back4">Назад</button>
+        <button type="button" class="btn btn-light" id="next5" disabled>Далі</button>
+    </div>
 
 </div>
-<div class="savebutton">
-    <button type="button" class="btn btn-light" id="buttonOficer">Надіслати</button>
+<div id="all" style="display: none">
+
+    <div class="divclass">
+        <h3 class="header1">Загальні відомості</h3>
+        <div class="">
+            <input id="ckeckzvanije" type="text" name = "checkresponse" value="" readonly>
+            <label for="ckeckzvanijezvanije">Військове звання</label>
+        </div>
+        <div class="">
+            <input id="ckeckFLP" type="text" name = "checkresponse"  value="" readonly>
+            <label for="ckeckFLP">Прізвище, ім’я, по батькові</label>
+        </div>
+
+        <div class="row" style="padding: 0 20px">
+            <div class="">
+                <input id="ckeckinstitute" type="text" name = "checkresponse"  value="" readonly>
+                <label for="ckeckinstitute">Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
+            </div>
+            <div class="">
+                <input id="ckeckyear" type="text"  name = "checkresponse"  value="" readonly>
+                <label for="ckeckyear">у (році)</label>
+            </div>
+        </div>
+        <div class="">
+            <input id="ckeckfacultet" type="text" name = "checkresponse"  value="" readonly>
+            <label for="ckeckfacultet">Факультет</label>
+        </div>
+        <div class="">
+            <input id="ckeckspecialize" type="text" name = "checkresponse"  value="" readonly>
+            <label for="ckeckspecialize">За спеціальністю</label>
+        </div>
+        <div class="">
+            <input id="ckeckwork" type="text" name = "checkresponse"  value="" readonly>
+            <label for="ckeckwork">Проходить службу (оперативне командування, військова частина)</label>
+        </div>
+        <div class="">
+            <input id="ckeckposada" type="text" name = "checkresponse"  value="" readonly>
+            <label for="ckeckposada">На посаді </label>
+        </div>
+        <div class="">
+            <input id="ckeckvidpovidnist" type="text" name = "checkresponse"  value="" readonly>
+            <label for="ckeckvidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
+                відповідає)</label>
+        </div>
+        <div class="savebutton">
+            <button type="button" class="btn btn-light" id="checngeresponse">Змінити</button>
+        </div>
+    </div>
+
+    <div class="divclass">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Назва дисципліни</th>
+                <th scope="col">Оцінка</th>
+            </tr>
+            </thead>
+            <tbody id="tbody1">
+
+            </tbody>
+        </table>
+
+        <div class="savebutton">
+            <button type="button" class="btn btn-light" id="changetable">Змінити</button>
+        </div>
+    </div>
+
+    <div class="divclass">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Назва дисципліни</th>
+                <th scope="col">Корисність</th>
+                <th scope="col">Недоліки</th>
+            </tr>
+            </thead>
+            <tbody id="tbody2">
+
+            </tbody>
+        </table>
+
+        <div class="savebutton">
+            <button type="button" class="btn btn-light" id="changetableSecond">Змінити</button>
+        </div>
+    </div>
+    <div class="divclass">
+        <h3 class="header1">Рішення Офіцера</h3>
+        <div class="input-field col s6">
+            <input id="oficerResponsechenge" type="text">
+            <label for="oficerResponsechenge">Рішення офіцера (посада, військове звання, прізвище,
+                ініціали)</label>
+        </div>
+        <div class="savebutton">
+            <button type="button" class="btn btn-light" id="changeOficerResponse">Змінити</button>
+        </div>
+    </div>
+    <div class="savebutton">
+        <button type="button" class="btn btn-light" id="buttonOficer">Надіслати</button>
+    </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="font/index.js"></script>
+<script src="font/displayOficer.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Сторінка реєстрації</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,7 +14,7 @@
     <header class="link">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="/autorization" style="font-size: 15px">Вхід</a>
-            <a class="navbar-brand" href="/registration" style="font-size: 15px">Реестрація</a>
+            <a class="navbar-brand" href="/registration" style="font-size: 15px">Реєстрація</a>
         </nav>
     </header>
 </div>
@@ -32,22 +32,27 @@
 </div>
 <div class="aut" style="margin-top: -10px">
     <form action="/registration" method="post">
-        <h5>Реестрація</h5>
+        <h5>Реєстрація</h5>
         <input placeholder="Ім'я та Прізвище"  type="text"  name="name">
         <input placeholder="Військове звання"  type="text" name="rank" >
         <input placeholder="Посада" type="text" name="posada" >
         <input placeholder="Військова частина" type="text" name="vch" >
         <input id="password" type="password"   name="password" placeholder="Пароль">
         <label id = 'lenghtPassword' style="color: red"></label>
-        <input id="password1" type="password"   name="password1" placeholder="Повторний пароль">
+        <input id="password1" type="password"   name="password1" placeholder="Пітвердження пароля">
         <label id = 'errorMessage' style="color: red"></label>
-        <p>
-            <label>
-                <input name="comander"  value="0" type="checkbox" aria-label="Checkbox for following text input">
-                <span>Безпосередній командир</span>
-            </label>
-        </p>
-        <button class="btn waves-effect waves-light" type="submit" id="button">Зарееструватись</button>
+        <div class="input-field col s6">
+            <div style="width: auto; height: auto">
+                <label>Статус користувача</label>
+                <select class="browser-default" id="status">
+                    <option value="" disabled selected>Вибір Статусу користувача</option>
+                    <option value="0">Офіцер який дає самооцінку</option>
+                    <option value="1">Командир який дає характеристику офіцера</option>
+                </select>
+            </div>
+
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" id="button">Зареєструватись</button>
     </form>
 </div>
 

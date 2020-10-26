@@ -7,7 +7,7 @@ let sequelize =  new Sequelize('Response','root','1111',{
         timestamps: false
     }
 });
-sequelize.sync();
+//sequelize.sync();
 module.exports = sequelize;
 
 

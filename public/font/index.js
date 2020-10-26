@@ -16,8 +16,6 @@ function obj() {
 }
 
 
-
-
 async function getOficerResponse() {
     let first = getFirstPunkt();
     let last = lastPosition();

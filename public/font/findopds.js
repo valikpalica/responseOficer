@@ -1,4 +1,4 @@
-document.getElementById('generateLInk').addEventListener('click',generateLink);
+document.getElementById('generateLInk').addEventListener('click', generateLink);
 let button = document.getElementById('button');
 button.addEventListener('click', getProcent);
 document.addEventListener('DOMContentLoaded', function () {
@@ -16,32 +16,35 @@ function createSlider() {
     document.getElementById('slider').max = date.getFullYear();
     document.getElementById('slider').min = 2000;
 }
+
 async function generateLink() {
     let year = document.getElementById('slider').value;
     let specialize = document.getElementById('specialize').value;
-    if(year!==undefined&& specialize!==undefined){
+    if (year.length!= 0&& specialize.length!= 0 ) {
 
-        let answer = await fetch('/downloadopds',{
-            method:'POST',
-            headers:{
+        let answer = await fetch('/downloadopds', {
+            method: 'POST',
+            headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             },
-            body:JSON.stringify({year:year,specialize:specialize}),
+            body: JSON.stringify({year: year, specialize: specialize}),
         });
         let json = await answer.json();
         console.log(json.answer);
-        if(json.answer){
-            setTimeout(()=>{
+        if (json.answer) {
+            setTimeout(() => {
                 let a = document.createElement('a');
-         a.setAttribute('href',`/downloadopds`);
-         a.setAttribute('download','word.docx');
-         a.innerText = 'Download';
-         let divLink = document.getElementById('divLInk');
-         divLink.appendChild(a);
-            },2000);
-        }}
-
-    else {
+                a.setAttribute('href', `/downloadopds`);
+                a.setAttribute('download', 'word.docx');
+                a.innerText = 'Download';
+                let divLink = document.getElementById('divLInk');
+                while (divLink.firstChild) {
+                    divLink.removeChild(divLink.lastChild);
+                }
+                divLink.appendChild(a);
+            }, 0);
+        }
+    } else {
         alert('choose year and specialize');
     }
 }
@@ -79,7 +82,7 @@ async function getProcent() {
     });
     let json = await data.json();
     console.log(json.answer);
-    masData  = json.answer;
+    masData = json.answer;
     createTable(json.answer);
 }
 
@@ -95,12 +98,13 @@ function createTable(mas) {
 <td>${validate(mas[i].procentNedolik.procentB5)}</td>
 <td>${validate(mas[i].procentNedolik.procentB6)}</td>
 <td>${validate(mas[i].procentNedolik.procentNone)}</td></tr>`;
-    };
+    }
+    ;
     tbody.innerHTML = innerHtml;
 }
 
 function validate(element) {
-    let newelement  = element == null ? 0 : element.toString().slice(0,4);
+    let newelement = element == null ? 0 : element.toString().slice(0, 4);
     return newelement;
 }
 

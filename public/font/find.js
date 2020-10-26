@@ -45,8 +45,8 @@ function createSlider() {
 async function generateLink() {
     let year = document.getElementById('slider').value;
     let specialize = document.getElementById('specialize').value;
-    if(year!==undefined&& specialize!==undefined){
 
+    if(year.length!= 0 && specialize.length != 0){
         let answer = await fetch('/downloaddisciplinas',{
             method:'POST',
             headers:{
@@ -63,8 +63,11 @@ async function generateLink() {
                 a.setAttribute('download','worddisciplinas.docx');
                 a.innerText = 'Download';
                 let divLink = document.getElementById('divLInk');
+                while (divLink.firstChild){
+                    divLink.removeChild(divLink.lastChild);
+                }
                 divLink.appendChild(a);
-            },2000);
+            },0);
         }}
 
     else {
@@ -91,12 +94,10 @@ async function findinstitute() {
 function create_table(mas) {
     let tbody = document.getElementById('tbody');
     let innerHTML = '';
-    let link = '';
-    let name ='';
-    for (let i = 0;i<mas.length;i++){
+        for (let i = 0;i<mas.length;i++){
         let midleBallOficers  =  mas[i].midleBallOficers == null ? 0: mas[i].midleBallOficers;
         let midleBallComanders = mas[i].midleComanders ==null? 0:mas[i].midleComanders;
-        let color = mas[i].midleBallOficers<3.0 || mas[i].midleComanders<3.0 ? '#D32F2F' :'#8BC34A';
+        let color = mas[i].midleBallOficers<3.0 || mas[i].midleComanders<3.0 ? '#FFCDD2' :'#8BC34A';
         innerHTML+= `<tr style="background-color: ${color}"><td>${namedisciplinas[mas[i].id-1].name}</td><td>${midleBallOficers}</td><td>${midleBallComanders}</td></tr>`;
     }
     tbody.innerHTML= innerHTML;
