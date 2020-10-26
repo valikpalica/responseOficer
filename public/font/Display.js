@@ -238,3 +238,15 @@ function getSecondTable() {
     return {mas:mas,midle:midle};
 
 }
+
+
+function time() {
+    let data = new Date();
+    let body = document.getElementById('time');
+    let hour = data.getHours();
+    let Minutes = data.getMinutes();
+    let second = data.getSeconds();
+    body.innerText = `${hour}:${Minutes}:${second}`;
+}
+
+setInterval(time,1000);
