@@ -21,6 +21,7 @@ document.getElementById('checngeresponse').addEventListener('click',changeFirstR
 document.getElementById('changetable').addEventListener('click',changeFirstTable);
 document.getElementById('changetableSecond').addEventListener('click',changeSecondTable);
 document.getElementById('changeOficerResponse').addEventListener('click',changeLastResponse);
+document.getElementById('year').addEventListener('change',checkYear);
 
 let namedisciplinas = [{name:'основ кримінального кодексу щодо військових злочинів та відповідальності за них'},
     {name:'основ міжнародного гуманітарного права'},
@@ -331,6 +332,15 @@ function time() {
     let Minutes = data.getMinutes();
     let second = data.getSeconds();
     body.innerText = `${hour}:${Minutes}:${second}`;
+}
+function checkYear() {
+    let year = document.getElementById('year').value;
+    let data = new Date();
+    if(+year>data.getFullYear()){
+        document.getElementById('year').value =  '';
+        alert('Не правильний рік');
+    }
+
 }
 
 setInterval(time,1000);

@@ -11,6 +11,7 @@ document.getElementById('changelast').addEventListener('click', changelast);
 document.getElementById('back1').addEventListener('click',back1);
 document.getElementById('back2').addEventListener('click',back2);
 document.getElementById('back3').addEventListener('click',back3);
+document.getElementById('year').addEventListener('change',checkYear);
 
 
 let namedisciplinas = [{name:'основ кримінального кодексу щодо військових злочинів та відповідальності за них'},
@@ -237,6 +238,15 @@ function getSecondTable() {
     let midle = counter/mas.length;
     return {mas:mas,midle:midle};
 
+}
+
+function checkYear() {
+    let year = document.getElementById('year').value;
+    let data = new Date();
+    if(+year>data.getFullYear()){
+        document.getElementById('year').value =  '';
+        alert('Не правильний рік');
+    }
 }
 
 
