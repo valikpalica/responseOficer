@@ -34,7 +34,6 @@ module.exports = async function (year, specialize) {
                 for (let k = 0; k < rez[j].dataValues.ResponseOficers.length; k++) {
                     ballOfciers.push(rez[j].dataValues.ResponseOficers[k].dataValues.ballofc);
                     ballcomanders.push(rez[j].dataValues.ResponseComanders[k].dataValues.ballcom);
-
                 }
                 ;
             }
