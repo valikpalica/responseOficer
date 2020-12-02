@@ -38,7 +38,8 @@ router.get('/registration', async (req, res) => {
     res.render('registration.hbs');
 });
 router.post('/registration', async (req, res) => {
-    let {name, posada, vch, password, password1, status} = req.body;
+    let {name,zvanije, posada, vch, password, password1, status} = req.body;
+    console.log(name,zvanije,posada,vch,password,password1,status);
     let user = await find(name, vch, password);
     if (user) {
         console.log('user was created');
@@ -47,9 +48,9 @@ router.post('/registration', async (req, res) => {
         if (password === password1) {
             let rez;
             if (+status === 1) {
-                rez = await saveUsers(name, posada, vch, password, 1);
+                rez = await saveUsers(name,zvanije, posada, vch, password, 1);
             } else {
-                rez = await saveUsers(name, posada, vch, password, 0);
+                rez = await saveUsers(name,zvanije, posada, vch, password, 0);
             }
             if (rez != null) {
                 res.redirect(`/autorization`);
@@ -79,7 +80,7 @@ router.post('/saveResponseComander', (req, res) => {
         specialize: first.specialize
     };
     saveResponseComander(first.institute, ancetaparam, second.mas, last, second.midle);
-    res.status(200).json({answer: 'ok'});
+    res.status(200).json({answer:true});
 });
 router.get('/saveResponseOficer', checkAuthenticated, (req, res) => {
     let Data = new Date();

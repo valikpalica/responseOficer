@@ -34,9 +34,23 @@
     <form action="/registration" method="post">
         <h5>Реєстрація</h5>
         <input placeholder="Ім'я та Прізвище"  type="text"  name="name">
-        <input placeholder="Військове звання"  type="text" name="rank" >
+        <div class="input-field col s6">
+            <div style="width: auto; height: auto">
+                <label>Звання користувача</label>
+                <select class="browser-default" name="zvanije">
+                    <option value="" disabled selected>Вибір Статусу користувача</option>
+                    <option value="Лейтенант">Лейтенант</option>
+                    <option value="стр.Лейтенант">стр.Лейтенант</option>
+                    <option value="Капітан">Капітан</option>
+                    <option value="Майор">Майор</option>
+                    <option value="Підполковник">Підполковник</option>
+                    <option value="Полковник">Полковник</option>
+                </select>
+            </div>
+        </div>
         <input placeholder="Посада" type="text" name="posada" >
-        <input placeholder="Військова частина" type="text" name="vch" >
+        <input placeholder="Військова частина" type="text" name="vch" id="vch">
+        <label id="vchError" style="color: red"></label>
         <input id="password" type="password"   name="password" placeholder="Пароль">
         <label id = 'lenghtPassword' style="color: red"></label>
         <input id="password1" type="password"   name="password1" placeholder="Пітвердження пароля">
@@ -44,7 +58,7 @@
         <div class="input-field col s6">
             <div style="width: auto; height: auto">
                 <label>Статус користувача</label>
-                <select class="browser-default" id="status">
+                <select class="browser-default" name="status">
                     <option value="" disabled selected>Вибір Статусу користувача</option>
                     <option value="0">Офіцер який дає самооцінку</option>
                     <option value="1">Командир який дає характеристику офіцера</option>

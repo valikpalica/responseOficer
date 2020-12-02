@@ -27,6 +27,10 @@ const User = sequelize.define('users',{
     status:{
         type:Sequelize.INTEGER,
         allowNull:false
+    },
+    zvanije:{
+        type:Sequelize.STRING,
+        allowNull:false
     }
 });
 

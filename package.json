@@ -1,7 +1,7 @@
 {
   "name": "responseoficer",
   "version": "1.0.0",
-  "description": "",
+  "description": "since work",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
@@ -20,12 +20,14 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
-    "bootstrap": "^4.5.3",
     "docx": "^5.3.0",
     "express": "^4.17.1",
     "express-flash": "0.0.2",
+    "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "hbs": "^4.1.1",
+    "lodash": "^4.17.20",
+    "lodash.update": "^4.10.2",
     "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^2.1.0",
     "office-clippy": "0.0.9",

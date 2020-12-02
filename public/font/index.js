@@ -10,48 +10,50 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.browser-default');
     var instances = M.FormSelect.init(elems);
 });
-
 function obj() {
     return {}
 }
-
-
 async function getOficerResponse() {
     let first = getFirstPunkt();
     let last = lastPosition();
     let third = getThirdTable();
     let fourth = getFourthTable();
     if(first!= undefined&&last!=undefined&&third!=undefined&&fourth!=undefined){
-        let rez = await fetch('/saveResponseOficer',{
+        let response = await fetch('/saveResponseOficer',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json;charset=utf-8'
             },
             body: JSON.stringify({first:first,third:third,fourth:fourth,last:last})
         });
+        let result = await response.json();
+        if(result.answer){
+            window.location.href = '/autorization';
+        }
         clear();
     }
     else {
         clear();
         return alert('not create');
     }
-
-
 }
-
-
 async function getComanderResponse() {
     let first = getFirstPunkt();
     let last = lastPosition();
     let second = getSecondTable();
-    if(first!=undefined&&last!=undefined&&second!=undefined){
-        await fetch('/saveResponseComander',{
+    if(first!==undefined&&last!==undefined&&second!==undefined){
+        let response = await fetch('/saveResponseComander',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json;charset=utf-8'
             },
             body: JSON.stringify({first:first,second:second,last:last})
         });
+        let result = await response.json();
+        console.log(result.answer);
+        if(result.answer){
+            window.location.href = '/autorization';
+        }
         clear();
     }
     else {
@@ -60,7 +62,6 @@ async function getComanderResponse() {
     }
 
 }
-
 function clear() {
      document.getElementById('zvanije').value = '';
      document.getElementById('institute').value  = '';
@@ -99,7 +100,6 @@ function clear() {
         }
     }
 }
-
 function getFirstPunkt() {
     let responseOficer = document.getElementsByName("response");
     let oficer = obj();
@@ -116,7 +116,6 @@ function getFirstPunkt() {
     oficer['specialize'] = specialize;
     return oficer;
 }
-
 function lastPosition() {
     let divResponse = document.getElementsByName("divResponse");
     let response = obj();
@@ -125,7 +124,6 @@ function lastPosition() {
     }
     return response;
 }
-
 function getSecondTable() {
    let ballcom = document.getElementsByName('ballcom');
     let mas = [];
@@ -149,7 +147,6 @@ function getSecondTable() {
         mas.length = 0;
     }
 }
-
 function getThirdTable() {
     let radiobutton = document.getElementsByName("checkboxfirth");
     let mas = [];
@@ -172,7 +169,6 @@ function getThirdTable() {
         mas.length = 0;
     }
 }
-
 function getFourthTable() {
     let mas = [];
     for (let i = 1; i <= 15; i++) {

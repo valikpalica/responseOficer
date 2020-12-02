@@ -114,6 +114,5 @@ module.exports = async  function createDoc(year,specailize,mas){
     await doc.addSection({children:[paragraph1,paragraph2,table]});
     let  buffer = await Packer.toBuffer(doc);
     fs.writeFileSync(path.join(__dirname, '../../public/word/',nameDoc),buffer);
-
     return  path.join(__dirname,'../../public/word/',nameDoc)
 };
