@@ -68,6 +68,7 @@ function next3() {
 }
 
 function back1() {
+    console.log('back1');
     let display = document.getElementById('instruction');
     let display1 = document.getElementById('generalResponse');
     display.style.display = "none";
@@ -93,7 +94,6 @@ function onChecngeInfo() {
     let select  = document.getElementById('generalResponse').getElementsByTagName('select');
     let input = document.getElementById('generalResponse').getElementsByTagName('input');
     for (let i=0;i<select.length;i++){
-        //console.log(select[i].value=='')
         if(select[i].value==''){
             button.disabled = true;
             return;

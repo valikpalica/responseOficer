@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Сторінка заяви від офіцера</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка Атентифікації</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
-<div class="headdd">
+<div class="header">
     <header class="link">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="/find" style="font-size: 15px">Пошук Дисциплін</a>
             <a class="navbar-brand" href="/findopds" style="font-size: 15px">Пошук Корисності</a>
-            <img src="img/emblam.png" alt="emblema" style="width: 30px;height: 30px">
+            <img src="img/emblam.png" alt="emblema" style="width: 30px;height: 30px;">
             <div id="time" style="margin-left: auto"></div>
         </nav>
     </header>
@@ -22,7 +22,7 @@
 <div class="header" style="margin-top: 60px"><h3 >ВІДГУК НА ВИПУСКНИКА</h3></div>
 <div class="divclass" id="generalReposne">
     <h3 class="header1">Загальні відомості</h3>
-    <div class="input-field col s6">
+    <div class="input-field">
         <div style="width: auto; height: auto">
             <label>Звання</label>
             <select class="browser-default" id="zvanije">
@@ -33,38 +33,37 @@
             </select>
         </div>
     </div>
-    <div class="input-field col s6">
-        <input id="FLP" type="text" name = "response">
+
+    <div class="input-field">
+        <input id="FLP" type="text" name="response">
         <label for="FLP">Прізвище, ім’я, по батькові</label>
     </div>
-
-    <div class="row" style="padding: 0 20px">
-        <div class="input-field col ">
-            <div style="width: auto; height: auto">
-                <label>Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
-                <select class="browser-default" id="institute">
-                    <option value="" disabled selected>Вибір вузу</option>
-                    <option value="1">ВІТІ</option>
-                </select>
-            </div>
-        </div>
-        <div class="input-field col ">
-            <input id="year" type="text" name = "response">
-            <label for="year">у (році)</label>
+    <div class="input-field">
+        <div style="width: auto; height: auto">
+            <label>Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
+            <select class="browser-default" id="institute">
+                <option value="" disabled selected>Вибір вузу</option>
+                <option value="1">ВІТІ</option>
+            </select>
         </div>
     </div>
-    <div class="input-field col s6">
+    <div class="input-field">
+        <input id="year" type="text" name="response">
+        <label for="year">у (році)</label>
+    </div>
+    <div class="input-field">
         <div style="width: auto; height: auto">
             <label>Факультет</label>
             <select class="browser-default" id="facultet">
-                <option value="" disabled selected >Вибір факультету</option>
+                <option value="" disabled selected>Вибір факультету</option>
                 <option value="Телекомунікації">Телекомунікації</option>
                 <option value="Інформаційні системи">Інформаційні системи</option>
                 <option value="Військове упарвління">Військове упарвління</option>
             </select>
         </div>
+
     </div>
-    <div class="input-field col s6">
+    <div class="input-field">
         <div style="width: auto; height: auto">
             <label>За спеціальністю</label>
             <select class="browser-default" id="specialize">
@@ -78,25 +77,24 @@
             </select>
         </div>
     </div>
-    <div class="input-field col s6">
-        <input id="work" type="text" name = "response">
-        <label for="work">Проходить службу (оперативне командування, військова частина)</label>
+    <div class="input-field">
+        <input id="work" type="text" name="response">
+        <label for="work">Проходить службу</label>
     </div>
-    <div class="input-field col s6">
-        <input id="posada" type="text" name = "response">
+    <div class="input-field">
+        <input id="posada" type="text" name="response">
         <label for="posada">На посаді </label>
     </div>
-    <div class="input-field col s6">
-        <input id="vidpovidnist" type="text" name = "response">
-        <label for="vidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
-            відповідає)</label>
+    <div class="input-field">
+        <input id="vidpovidnist" type="text" name="response">
+        <label for="vidpovidnist">Відповідність займаній посаді</label>
     </div>
     <div class="savebutton">
         <button type="button" class="btn btn-light" id="next1" disabled>Далі</button>
     </div>
 </div>
 
-<div class="divclass" id="table1" style="display: none">
+<div class="table-responsive divclass" id="table1" style="display: none">
     <h3 class="header1">Самооцінка військово-професійних якостей офіцером-випускником за результатами службової діяльності</h3>
     <table class="table table-bordered" style="align-items: center">
         <thead style="text-align: center">
@@ -1075,7 +1073,7 @@
     <br>
 </div>
 
-<div class="divclass" id="table2" style="display: none">
+<div class="table-responsive divclass" id="table2" style="display: none">
     <h3 class="header1">Перелік компонент освітньо-професійної програми (навчальні дисципліни), які формують
         військово-професійні та військово-спеціальні компетентності випускника</h3><br>
     <table class="table table-bordered" style="align-items: center">
@@ -2052,8 +2050,7 @@
     <h3 class="header1">Рішення Офіцера</h3>
     <div class="input-field col s6">
         <input id="oficerResponse" type="text" name="divResponse">
-        <label for="oficerResponse">Рішення офіцера (посада, військове звання, прізвище,
-            ініціали)</label>
+        <label for="oficerResponse">Рішення офіцера</label>
     </div>
     <div class="savebutton">
         <button type="button" class="btn btn-light" id="back4">Назад</button>
@@ -2102,15 +2099,14 @@
         </div>
         <div class="">
             <input id="ckeckvidpovidnist" type="text" name = "checkresponse"  value="" readonly>
-            <label for="ckeckvidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
-                відповідає)</label>
+            <label for="ckeckvidpovidnist">Відповідність  випускника займаній посаді </label>
         </div>
         <div class="savebutton">
             <button type="button" class="btn btn-light" id="checngeresponse">Змінити</button>
         </div>
     </div>
 
-    <div class="divclass">
+    <div class="table-responsive divclass">
         <table class="table">
             <thead>
             <tr>
@@ -2128,7 +2124,7 @@
         </div>
     </div>
 
-    <div class="divclass">
+    <div class="table-responsive divclass">
         <table class="table">
             <thead>
             <tr>

@@ -11,13 +11,11 @@
 <body>
 <div class="header">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/find" style="font-size: 15px">Пошук Дисциплін</a>
-        <a class="navbar-brand" href="/findopds" style="font-size: 15px">Пошук Корисності</a>
-        <img src="img/emblam.png" alt="emblema" style="width: 30px;height: 30px; display: block">
-        <div id="time" style="margin-left: auto"></div>
+        <a class="navbar-brand" href="/find">Пошук Дисциплін</a>
+        <a class="navbar-brand" href="/findopds">Пошук Корисності</a>
+        <div class="emblema"><img src="img/emblam.png" alt="emblema" style="width: 30px;height: 30px; display: block" ></div>
+        <div id="time" style="margin-left: auto" class="time"></div>
     </nav>
-
-
 </div>
 <div class="divclass" >
     <h3 class="header1">Пошук оцінок</h3>
@@ -42,7 +40,7 @@
         </div>
     </div>
     <div style="margin-bottom: 10px;">
-        <div style="width: 50%">
+        <div class="buttonsgroup">
             <button class="btn waves-effect waves-light" id="button" style="width: 30%">
                 Пошук
             </button>
@@ -52,8 +50,8 @@
             <div id="divLInk" style="float: right;"></div>
         </div>
     </div>
-    <div>
-        <table  class="table table-bordered" style="align-items: center">
+    <div class="table-responsive">
+        <table  class=" table-bordered" style="align-items: center">
             <thead>
             <tr>
                 <th>Назва дисципліни</th>
@@ -61,7 +59,7 @@
                 <th>Середня оцінка Командирів</th>
             </tr>
             </thead>
-            <tbody id="tbody">
+            <tbody id="tbody" class="tbody">
             </tbody>
         </table>
     </div>

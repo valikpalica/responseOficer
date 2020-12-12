@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сторінка заяви від командира</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="headdd">
+<div class="header">
     <header class="link">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="/find" style="font-size: 15px">Пошук Дисциплін</a>
@@ -19,10 +21,13 @@
         </nav>
     </header>
 </div>
-<div class="header" style="margin-top: 60px"><h3 >ВІДГУК НА ВИПУСКНИКА </h3></div>
-<div class="divclass" id = "generalResponse">
+
+<div class="header"><h3>ВІДГУК НА ВИПУСКНИКА </h3></div>
+
+<div class="divclass" id="generalResponse">
+
     <h3 class="header1">Загальні відомості</h3>
-    <div class="input-field col s6">
+    <div class="input-field">
         <div style="width: auto; height: auto">
             <label>Звання</label>
             <select class="browser-default" id="zvanije">
@@ -32,34 +37,30 @@
                 <option value="стр.Лейтенант">стр.Лейтенант</option>
             </select>
         </div>
-
     </div>
-    <div class="input-field col s6">
-        <input id="FLP" type="text" name = "response">
+
+    <div class="input-field">
+        <input id="FLP" type="text" name="response">
         <label for="FLP">Прізвище, ім’я, по батькові</label>
     </div>
-
-    <div class="row" style="padding: 0 20px">
-        <div class="input-field col ">
-            <div style="width: auto; height: auto">
-                <label>Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
-                <select class="browser-default" id="institute">
-                    <option value="" disabled selected>Вибір вузу</option>
-                    <option value="1">ВІТІ</option>
-                </select>
-            </div>
-
-        </div>
-        <div class="input-field col ">
-            <input id="year" type="text" name = "response">
-            <label for="year">у (році)</label>
+    <div class="input-field">
+        <div style="width: auto; height: auto">
+            <label>Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
+            <select class="browser-default" id="institute">
+                <option value="" disabled selected>Вибір вузу</option>
+                <option value="1">ВІТІ</option>
+            </select>
         </div>
     </div>
-    <div class="input-field col s6">
+    <div class="input-field">
+        <input id="year" type="text" name="response">
+        <label for="year">у (році)</label>
+    </div>
+    <div class="input-field">
         <div style="width: auto; height: auto">
             <label>Факультет</label>
             <select class="browser-default" id="facultet">
-                <option value="" disabled selected >Вибір факультету</option>
+                <option value="" disabled selected>Вибір факультету</option>
                 <option value="Телекомунікації">Телекомунікації</option>
                 <option value="Інформаційні системи">Інформаційні системи</option>
                 <option value="Військове упарвління">Військове упарвління</option>
@@ -67,7 +68,7 @@
         </div>
 
     </div>
-    <div class="input-field col s6">
+    <div class="input-field">
         <div style="width: auto; height: auto">
             <label>За спеціальністю</label>
             <select class="browser-default" id="specialize">
@@ -81,51 +82,67 @@
             </select>
         </div>
     </div>
-    <div class="input-field col s6">
-        <input id="work" type="text" name = "response">
-        <label for="work">Проходить службу (оперативне командування, військова частина)</label>
+    <div class="input-field">
+        <input id="work" type="text" name="response">
+        <label for="work">Проходить службу</label>
     </div>
-    <div class="input-field col s6">
-        <input id="posada" type="text" name = "response">
+    <div class="input-field">
+        <input id="posada" type="text" name="response">
         <label for="posada">На посаді </label>
     </div>
-    <div class="input-field col s6">
-        <input id="vidpovidnist" type="text" name = "response">
-        <label for="vidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
-            відповідає)</label>
+    <div class="input-field">
+        <input id="vidpovidnist" type="text" name="response">
+        <label for="vidpovidnist">Відповідність займаній посаді</label>
     </div>
     <div class="savebutton">
-
         <button type="button" class="btn btn-light" id="next" disabled>Далі</button>
     </div>
 </div>
 
-<div class="divclass" id="instruction" style="display: none">
-        <h3 class="header1">Система оцінювання</h3>
-        <div style="border: 1px solid black;" style="margin: 20px 0px">
-            <div class="option">
-                Оцінювання якості виконання службових (бойових) функцій за відповідною посадою (ВОС), результати індивідуальної та колективної підготовки здійснюється у 4-х бальній шкалі безпосереднім командиром, який готує відгук.
-            </div>
-            <div class="option">Результати щорічного оцінювання шляхом внесення позначки “V” у відповідну строку.</div>
-            <h6 style="text-indent: 10px;">Відмінно</h6>
-            <div class="option">випускник ВВНЗ (ВНП ЗВО) здатний і готовий самостійно та в повному обсязі виконувати обов’язки (службові (бойові) функцій) за посадовим призначенням, професійно-важливі якості випускника сформовано на високому рівні. Спроможний творчо вирішувати типові й нетипові завдання у звичайних та екстремальних умовах, схильний до самоудосконалення.</div>
-            <h6 style="text-indent: 10px;">Незадовільно</h6>
-            <div class="option">випускник ВВНЗ (ВНП ЗВО) при виконанні обов’язків (службових (бойових) функцій) за посадовим призначенням припускається суттєвих помилок, які самостійно виправити не може, професійно-важливі якості випускника сформовано на низькому рівні. Випускник потребує постійного контролю та допомоги старших командирів і начальників, до самоудосконалення не схильний.</div>
-            <h6 style="text-indent: 10px;">Оцінки "4" "3"</h6>
-            <div class="option">як проміжні по відношенню до оцінок "відмінно" та "незадовільно", вирізняються за показниками від балу "5" проявом меншої самостійності та творчості випускника при виконанні ним посадових обов’язків чи виконанні їх не в повному обсязі, що, в цілому, забезпечує досягнення кінцевого результату професійної діяльності. </div>
-            <h6 style="text-indent: 10px;">Неоцінена </h6>
-            <div class="option">ставиться у випадку, коли командир утруднюється оцінити рівень виконанні обов’язків (службових (бойових) функцій) за посадовим призначення внаслідок певних обставин.</div>
 
+<div class="divclass" id="instruction" style="display: none">
+    <h3 class="header1">Система оцінювання</h3>
+    <div style="border: 1px solid black;" style="margin: 20px 0px">
+        <div class="option">
+            Оцінювання якості виконання службових (бойових) функцій за відповідною посадою (ВОС), результати
+            індивідуальної та колективної підготовки здійснюється у 4-х бальній шкалі безпосереднім командиром, який
+            готує відгук.
         </div>
-        <div class="savebutton">
-            <button type="button" class="btn btn-light" id="back1">Назад</button>
-            <button type="button" class="btn btn-light" id="next1" >Далі</button>
+        <div class="option">Результати щорічного оцінювання шляхом внесення позначки “V” у відповідну строку.</div>
+        <h6 style="text-indent: 10px;">Відмінно</h6>
+        <div class="option">випускник ВВНЗ (ВНП ЗВО) здатний і готовий самостійно та в повному обсязі виконувати
+            обов’язки (службові (бойові) функцій) за посадовим призначенням, професійно-важливі якості випускника
+            сформовано на високому рівні. Спроможний творчо вирішувати типові й нетипові завдання у звичайних та
+            екстремальних умовах, схильний до самоудосконалення.
         </div>
+        <h6 style="text-indent: 10px;">Незадовільно</h6>
+        <div class="option">випускник ВВНЗ (ВНП ЗВО) при виконанні обов’язків (службових (бойових) функцій) за посадовим
+            призначенням припускається суттєвих помилок, які самостійно виправити не може, професійно-важливі якості
+            випускника сформовано на низькому рівні. Випускник потребує постійного контролю та допомоги старших
+            командирів і начальників, до самоудосконалення не схильний.
+        </div>
+        <h6 style="text-indent: 10px;">Оцінки "4" "3"</h6>
+        <div class="option">як проміжні по відношенню до оцінок "відмінно" та "незадовільно", вирізняються за
+            показниками від балу "5" проявом меншої самостійності та творчості випускника при виконанні ним посадових
+            обов’язків чи виконанні їх не в повному обсязі, що, в цілому, забезпечує досягнення кінцевого результату
+            професійної діяльності.
+        </div>
+        <h6 style="text-indent: 10px;">Неоцінена </h6>
+        <div class="option">ставиться у випадку, коли командир утруднюється оцінити рівень виконанні обов’язків
+            (службових (бойових) функцій) за посадовим призначення внаслідок певних обставин.
+        </div>
+    </div>
+    <div class="savebutton">
+        <button type="button" class="btn btn-light" id="back1">Назад</button>
+        <button type="button" class="btn btn-light" id="next1">Далі</button>
+    </div>
 </div>
 
-<div class="divclass" id="AllTableBall" style="display: none">
+
+<div class="table-responsive divclass" id="AllTableBall" style="display: none">
     <br>
-    <h3 class="header1">Оцінка військово-професійних якостей офіцера-випускника за результатами службової діяльності</h3>
+    <h3 class="header1">Оцінка військово-професійних якостей офіцера-випускника за результатами службової
+        діяльності</h3>
     <table class="table table-bordered" style="align-items: center">
         <thead>
         <tr>
@@ -1087,25 +1104,23 @@
         </tr>
         </tbody>
     </table>
-        <div class="savebutton">
-            <button type="button" class="btn btn-light" id="back2">Назад</button>
-            <button type="button" class="btn btn-light" id="next2" disabled>Далі</button>
-        </div>
-
+    <div class="savebutton">
+        <button type="button" class="btn btn-light" id="back2">Назад</button>
+        <button type="button" class="btn btn-light" id="next2" disabled>Далі</button>
+    </div>
 </div>
 
-<div class="divclass" id = "response" style="display: none">
+<div class="divclass" id="response" style="display: none">
     <h3 class="header1">Рішення безпосереднього начальника, командира військової частини та ознайомлення випускника</h3>
-    <div class="input-field col s6">
+    <div class="" style="margin-top: 5%">
         <input id="comanderResponse" type="text" name="divResponse">
         <label for="comander">Безпосередній
-            командир (посада, військове звання, прізвище, ініціали)
+            командир
         </label>
     </div>
-    <div class="input-field col s6">
+    <div class="" style="margin-top: 5%">
         <input id="comandervhResponse" type="text" name="divResponse">
-        <label for="comandervhResponse">З відгуком згоден:
-            Командир військової частини (військове звання, прізвище, ініціали)
+        <label for="comandervhResponse">Загальне рішення
         </label>
     </div>
     <div class="savebutton">
@@ -1115,47 +1130,47 @@
 </div>
 
 
-<div id = "all" style="display: none">
+<div id="all" style="display: none">
 
     <div class="divclass">
         <h3 class="header1">Загальні відомості</h3>
         <div class="">
-            <input id="ckeckzvanije" type="text" name = "checkresponse" value="" readonly>
+            <input id="ckeckzvanije" type="text" name="checkresponse" value="" readonly>
             <label for="ckeckzvanijezvanije">Військове звання</label>
         </div>
         <div class="">
-            <input id="ckeckFLP" type="text" name = "checkresponse"  value="" readonly>
+            <input id="ckeckFLP" type="text" name="checkresponse" value="" readonly>
             <label for="ckeckFLP">Прізвище, ім’я, по батькові</label>
         </div>
 
         <div class="row" style="padding: 0 20px">
             <div class="">
-                <input id="ckeckinstitute" type="text" name = "checkresponse"  value="" readonly>
+                <input id="ckeckinstitute" type="text" name="checkresponse" value="" readonly>
                 <label for="ckeckinstitute">Закінчив (найменування ВВНЗ або ВНП ЗВО)</label>
             </div>
             <div class="">
-                <input id="ckeckyear" type="text"  name = "checkresponse"  value="" readonly>
+                <input id="ckeckyear" type="text" name="checkresponse" value="" readonly>
                 <label for="ckeckyear">у (році)</label>
             </div>
         </div>
         <div class="">
-            <input id="ckeckfacultet" type="text" name = "checkresponse"  value="" readonly>
+            <input id="ckeckfacultet" type="text" name="checkresponse" value="" readonly>
             <label for="ckeckfacultet">Факультет</label>
         </div>
         <div class="">
-            <input id="ckeckspecialize" type="text" name = "checkresponse"  value="" readonly>
+            <input id="ckeckspecialize" type="text" name="checkresponse" value="" readonly>
             <label for="ckeckspecialize">За спеціальністю</label>
         </div>
         <div class="">
-            <input id="ckeckwork" type="text" name = "checkresponse"  value="" readonly>
+            <input id="ckeckwork" type="text" name="checkresponse" value="" readonly>
             <label for="ckeckwork">Проходить службу (оперативне командування, військова частина)</label>
         </div>
         <div class="">
-            <input id="ckeckposada" type="text" name = "checkresponse"  value="" readonly>
+            <input id="ckeckposada" type="text" name="checkresponse" value="" readonly>
             <label for="ckeckposada">На посаді </label>
         </div>
         <div class="">
-            <input id="ckeckvidpovidnist" type="text" name = "checkresponse"  value="" readonly>
+            <input id="ckeckvidpovidnist" type="text" name="checkresponse" value="" readonly>
             <label for="ckeckvidpovidnist">Відповідність спеціальності випускника займаній посаді (відповідає, не
                 відповідає)</label>
         </div>
@@ -1163,28 +1178,27 @@
             <button type="button" class="btn btn-light" id="checngeresponse">Змінити</button>
         </div>
     </div>
-       <div class="divclass">
-           <table class="table">
-               <thead>
-               <tr>
-                   <th scope="col">Назва дисципліни</th>
-                   <th scope="col">Оцінка</th>
-               </tr>
-               </thead>
-               <tbody id="tbody">
+    <div class="table-responsive divclass">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Назва дисципліни</th>
+                <th scope="col">Оцінка</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
 
-               </tbody>
-           </table>
+            </tbody>
+        </table>
 
-           <div class="savebutton">
-               <button type="button" class="btn btn-light" id="changetable">Змінити</button>
-           </div>
-       </div>
-
+        <div class="savebutton">
+            <button type="button" class="btn btn-light" id="changetable">Змінити</button>
+        </div>
+    </div>
 
 
     <div class="divclass">
-        <div class="">
+        <div style="margin-top: 5%">
             <input id="checkcomanderResponse" type="text" name="ckeckdivResponse">
             <label for="comander">Безпосередній
                 командир (посада, військове звання, прізвище, ініціали)
@@ -1200,13 +1214,10 @@
             <button type="button" class="btn btn-light" id="changelast">Змінити</button>
         </div>
     </div>
-
     <div class="savebutton">
         <button type="button" class="btn btn-light" id="button">Надіслати</button>
     </div>
 </div>
-
-
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

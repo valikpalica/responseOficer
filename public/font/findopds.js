@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.browser-default');
     var instances = M.FormSelect.init(elems);
 });
-
-
 function createSlider() {
     const date = new Date;
     document.getElementById('slider').max = date.getFullYear();
@@ -28,6 +26,13 @@ function imageDownload(){
 async function generateLink() {
     let year = document.getElementById('slider').value;
     let specialize = document.getElementById('specialize').value;
+    let divLink = document.getElementById('divLInk');
+    let innerSlider = `<div class="d-flex justify-content-center">
+                                      <div class="spinner-border text-primary" role="status">
+                                         <span class="sr-only">Loading...</span>
+                                      </div>
+                                    </div>`;
+
     if (year.length!= 0&& specialize.length!= 0 ) {
 
         let answer = await fetch('/downloadopds', {
@@ -37,21 +42,29 @@ async function generateLink() {
             },
             body: JSON.stringify({year: year, specialize: specialize}),
         });
-        let json = await answer.json();
-        console.log(json.answer);
-        if (json.answer) {
-            setTimeout(() => {
+        let req = await answer.body.getReader();
+
+
+        while (true){
+            const {done, value} = await req.read();
+            if(done){
                 let a = document.createElement('a');
                 a.setAttribute('href', `/downloadopds`);
                 a.setAttribute('download', 'word.docx');
                 a.innerText = 'Download';
-                let divLink = document.getElementById('divLInk');
+
                 while (divLink.firstChild) {
                     divLink.removeChild(divLink.lastChild);
                 }
                 a.innerHTML= imageDownload();
                 divLink.appendChild(a);
-            }, 0);
+                break;
+            }
+            else
+                {
+                    divLink.innerHTML = innerSlider;
+                    console.log('loading')
+                }
         }
     } else {
         alert('choose year and specialize');
@@ -99,16 +112,15 @@ function createTable(mas) {
     let tbody = document.getElementById('tbody');
     let innerHtml = '';
     for (let i = 0; i < mas.length; i++) {
-        innerHtml += `<tr><td>${masBaseStokes[mas[i].id - 1].name}</td><td>${validate(mas[i].procentCoris.procentA1)}</td><td>${validate(mas[i].procentCoris.procentA2)}</td><td>${validate(mas[i].procentCoris.procentA3)}</td>
-<td>${validate(mas[i].procentNedolik.procentB1)}</td>
-<td>${validate(mas[i].procentNedolik.procentB2)}</td>
-<td>${validate(mas[i].procentNedolik.procentB3)}</td>
-<td>${validate(mas[i].procentNedolik.procentB4)}</td>
-<td>${validate(mas[i].procentNedolik.procentB5)}</td>
-<td>${validate(mas[i].procentNedolik.procentB6)}</td>
-<td>${validate(mas[i].procentNedolik.procentNone)}</td></tr>`;
-    }
-    ;
+        innerHtml += `<tr><td>${masBaseStokes[mas[i].id - 1].name}</td><td class="disableCor">${validate(mas[i].procentCoris.procentA1)}</td><td class="disableCor">${validate(mas[i].procentCoris.procentA2)}</td><td class="disableCor">${validate(mas[i].procentCoris.procentA3)}</td>
+<td class="disabled">${validate(mas[i].procentNedolik.procentB1)}</td>
+<td class="disabled">${validate(mas[i].procentNedolik.procentB2)}</td>
+<td class="disabled">${validate(mas[i].procentNedolik.procentB3)}</td>
+<td class="disabled">${validate(mas[i].procentNedolik.procentB4)}</td>
+<td class="disabled">${validate(mas[i].procentNedolik.procentB5)}</td>
+<td class="disabled">${validate(mas[i].procentNedolik.procentB6)}</td>
+<td class="disabled">${validate(mas[i].procentNedolik.procentNone)}</td></tr>`;
+    };
     tbody.innerHTML = innerHtml;
 }
 
