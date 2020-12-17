@@ -10,7 +10,7 @@ let button = document.getElementById('button');
 button.addEventListener('click', findinstitute);
 document.getElementById('save').addEventListener('click', generateLink);
 
-let namedisciplinas = [{name: 'основ кримінального кодексу щодо військових злочинів та відповідальності за них'},
+const namedisciplinas = [{name: 'основ кримінального кодексу щодо військових злочинів та відповідальності за них'},
     {name: 'основ міжнародного гуманітарного права'},
     {name: 'Статутів Збройних Сил України'},
     {name: 'підтримувати підрозділ у стані постійної бойової готовності'},
@@ -37,6 +37,10 @@ let namedisciplinas = [{name: 'основ кримінального кодек�
     {name: 'особиста дисциплінованість, стресостійкість та витривалість'},
     {name: 'швидко реагувати на ризькі зміни в бойовій (навчальній) обстановці'}];
 
+function main() {
+    createSlider();
+    setInterval(time, 1000);
+}
 function createSlider() {
     const date = new Date;
     document.getElementById('slider').max = date.getFullYear();
@@ -50,11 +54,12 @@ function imageDownload() {
 </svg><p style="float: right">Download</p>`
 }
 
+
 async function generateLink() {
     let year = document.getElementById('slider').value;
     let specialize = document.getElementById('specialize').value;
     let divLink = document.getElementById('divLInk');
-
+    divLink.innerHTML = divLoader();
 
     if (year.length != 0 && specialize.length != 0) {
         let answer = await fetch('/downloaddisciplinas', {
@@ -65,32 +70,51 @@ async function generateLink() {
             body: JSON.stringify({year: year, specialize: specialize}),
         });
         let reader = await answer.body.getReader();
-        while (true) {
-            const {done, value} = await reader.read();
-            if (done) {
-                let a = document.createElement('a');
-                a.setAttribute('href', `/downloaddisciplinas`);
-                a.setAttribute('download', 'worddisciplinas.docx');
-
-                while (divLink.firstChild) {
-                    divLink.removeChild(divLink.lastChild);
-                }
-                a.innerHTML = imageDownload();
-                divLink.appendChild(a);
-                break;
-            } else {
-               let innerSlider = `<div class="d-flex justify-content-center">
-                                      <div class="spinner-border text-primary" role="status">
-                                         <span class="sr-only">Loading...</span>
-                                      </div>
-                                    </div>`;
-                 divLink.innerHTML = innerSlider;
-            }
-        }
+        GetDone(reader,divLink);
     } else {
         alert('choose year and specialize');
     }
 }
+
+
+function GetDone(reader,divLink) {
+
+    let interval = setInterval(async ()=>{
+        const {done} = await reader.read();
+        if(done){
+            let a = generateTag();
+            clearLink(divLink);
+            a.innerHTML = imageDownload();
+            divLink.appendChild(a);
+            clearInterval(interval);
+        }
+
+    },1000);
+}
+
+function divLoader() {
+    let innerSlider = `<div class="d-flex justify-content-center">
+                                      <div class="spinner-border text-primary" role="status">
+                                         <span class="sr-only">Loading...</span>
+                                      </div>
+                                    </div>`;
+    return innerSlider;
+}
+
+function generateTag(){
+    let a = document.createElement('a');
+    a.setAttribute('href', `/downloaddisciplinas`);
+    a.setAttribute('download', 'worddisciplinas.docx');
+    return a;
+}
+function clearLink(divLink){
+    while (divLink.firstChild) {
+        divLink.removeChild(divLink.lastChild);
+    }
+}
+
+
+
 
 async function findinstitute() {
     let year = document.getElementById('slider').value;
@@ -105,7 +129,6 @@ async function findinstitute() {
     let obj = await rez.json();
     console.log(obj);
     create_table(obj.answer);
-
 }
 
 function create_table(mas) {
@@ -120,7 +143,7 @@ function create_table(mas) {
     tbody.innerHTML = innerHTML;
 }
 
-createSlider();
+
 
 function time() {
     let data = new Date();
@@ -131,4 +154,6 @@ function time() {
     body.innerText = `${hour}:${Minutes}:${second}`;
 }
 
-setInterval(time, 1000);
+main();
+
+

@@ -27,11 +27,7 @@ async function generateLink() {
     let year = document.getElementById('slider').value;
     let specialize = document.getElementById('specialize').value;
     let divLink = document.getElementById('divLInk');
-    let innerSlider = `<div class="d-flex justify-content-center">
-                                      <div class="spinner-border text-primary" role="status">
-                                         <span class="sr-only">Loading...</span>
-                                      </div>
-                                    </div>`;
+    divLink.innerHTML = divLoader();
 
     if (year.length!= 0&& specialize.length!= 0 ) {
 
@@ -42,35 +38,46 @@ async function generateLink() {
             },
             body: JSON.stringify({year: year, specialize: specialize}),
         });
-        let req = await answer.body.getReader();
-
-
-        while (true){
-            const {done, value} = await req.read();
-            if(done){
-                let a = document.createElement('a');
-                a.setAttribute('href', `/downloadopds`);
-                a.setAttribute('download', 'word.docx');
-                a.innerText = 'Download';
-
-                while (divLink.firstChild) {
-                    divLink.removeChild(divLink.lastChild);
-                }
-                a.innerHTML= imageDownload();
-                divLink.appendChild(a);
-                break;
-            }
-            else
-                {
-                    divLink.innerHTML = innerSlider;
-                    console.log('loading')
-                }
-        }
+        let reader = await answer.body.getReader();
+        GetDone(reader,divLink);
     } else {
         alert('choose year and specialize');
     }
 }
 
+function GetDone(reader,divLink) {
+
+    let interval = setInterval(async ()=>{
+        const {done} = await reader.read();
+        if(done){
+            let a = genTag();
+            clearLink(divLink);
+            a.innerHTML = imageDownload();
+            divLink.appendChild(a);
+            clearInterval(interval);
+        }
+
+    },1000);
+}
+function genTag (){
+    let a = document.createElement('a');
+    a.setAttribute('href', `/downloadopds`);
+    a.setAttribute('download', 'word.docx');
+    return a;
+}
+function clearLink(divLink){
+    while (divLink.firstChild) {
+        divLink.removeChild(divLink.lastChild);
+    }
+}
+function divLoader() {
+    let innerSlider = `<div class="d-flex justify-content-center">
+                                      <div class="spinner-border text-primary" role="status">
+                                         <span class="sr-only">Loading...</span>
+                                      </div>
+                                    </div>`;
+    return innerSlider;
+}
 
 let masData = [];
 let masBaseStokes = [
