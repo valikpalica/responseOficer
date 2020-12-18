@@ -215,11 +215,6 @@ td {
     .header a {
         font-size: 5%
     }
-
-    .table {
-        font-size: 15px;
-    }
-
     .choose {
         display: block;
     }
@@ -235,7 +230,6 @@ td {
     }
     .input-field label{
         font-size: 15px;
-
     }
 }
 

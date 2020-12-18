@@ -56,7 +56,6 @@ function GetDone(reader,divLink) {
             divLink.appendChild(a);
             clearInterval(interval);
         }
-
     },1000);
 }
 function genTag (){
@@ -98,7 +97,6 @@ let masBaseStokes = [
     {name: 'Військова педагогіка та психологія (у тому числі лідерство)'}
 ];
 
-
 async function getProcent() {
     let year = document.getElementById('slider').value;
     let specialize = document.getElementById('specialize').value;
@@ -135,7 +133,6 @@ function validate(element) {
     let newelement = element == null ? 0 : element.toString().slice(0, 4);
     return newelement;
 }
-
 createSlider();
 function time() {
     let data = new Date();
