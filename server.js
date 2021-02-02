@@ -8,6 +8,7 @@ const flash = require('express-flash');
 const session = require('express-session');
 const  parser = require('body-parser');
 const Activedb = require('./API/dbUsers/Activedb');
+const host = '192.168.1.103';
 app.set("views engine", "hbs");
 
 app.use(parser.urlencoded({extended: false}));
@@ -33,6 +34,6 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use('/',autification);
 
 app.listen(8080,async ()=>{
-    console.log('server has been started');
+    console.log('server has been started on 192.168.1.104 host port 8080');
     await Activedb();
 });
